@@ -1,3 +1,4 @@
-import HeroContainer from "./Hero.tsx/HeroContainer";
+import HeroContainer from "./Hero/HeroContainer";
+import Skills from "./Skills";
 
-export { HeroContainer };
+export { HeroContainer, Skills };
