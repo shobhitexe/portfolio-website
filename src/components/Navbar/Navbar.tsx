@@ -57,7 +57,7 @@ export default function Navbar() {
               href={""}
               as={nav.link}
               key={nav.title}
-              className="cursor-pointer text-white hover:underline underline-offset-2 "
+              className="cursor-pointer text-white hover:underline underline-offset-2"
             >
               {nav.title}
             </Link>

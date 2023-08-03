@@ -8,7 +8,7 @@ import {
   animateResumeButtonHover,
   animateGitDiv,
 } from "./HeroAnimations";
-import { gsap } from "gsap";
+import Link from "next/link";
 
 export default function HeroRight() {
   const portfolioButtonDiv: MutableRefObject<HTMLHeadingElement | null> =
@@ -40,7 +40,7 @@ export default function HeroRight() {
   }
 
   return (
-    <div className="absolute h-screen right-0 bg-blackShade w-[300px] md:flex hidden flex-col gap-10 z-10">
+    <div className="absolute h-screen right-0 bg-blackShade w-[300px] md:flex hidden flex-col gap-10 z-50">
       <RoundedCorner
         width={50}
         height={50}
@@ -96,7 +96,9 @@ export default function HeroRight() {
           ref={resumeButton}
           className="font-matter bg-white px-3 py-2 rounded-3xl flex items-center h-[80%] w-[80%] "
         >
-          Download Resume
+          <Link target="_blank" href={"/Resume"}>
+            Download Resume
+          </Link>
         </div>
       </div>
     </div>
