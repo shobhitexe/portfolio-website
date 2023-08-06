@@ -1,5 +1,4 @@
 import { ReactNode, useEffect, Fragment } from "react";
-import Navbar from "./Navbar/Navbar";
 import { useDispatch } from "react-redux";
 import { setCurrRoute } from "@/store/slices/navCurrRouteText";
 import { useRouter } from "next/router";
@@ -21,7 +20,6 @@ export default function Layout({ children }: { children: ReactNode }) {
       {currRoute !== "/Resume" ? (
         <Fragment>
           <CustomCursor />
-          <Navbar />
         </Fragment>
       ) : (
         <Fragment />
