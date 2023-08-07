@@ -27,7 +27,7 @@ export const CustomCursor = () => {
       src={"images/cursor/planet.svg"}
       ref={cursorRef}
       alt="cursor"
-      className="flex absolute z-40"
+      className="flex absolute z-10"
       width={40}
       height={40}
     />

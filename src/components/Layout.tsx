@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { CustomCursor } from "./Cursor/Cursor";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/rootReducer";
+import Navbar from "./Navbar/Navbar";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const dispatch = useDispatch();
@@ -19,7 +20,8 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="relative">
       {currRoute !== "/Resume" ? (
         <Fragment>
-          <CustomCursor />
+          {/* <CustomCursor /> */}
+          <Navbar />
         </Fragment>
       ) : (
         <Fragment />

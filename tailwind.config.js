@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -15,18 +15,17 @@ module.exports = {
         lg: "1200px",
         xl: "1700px",
       },
-      backgroundImage: {
-        'heroBg' : "url(/images/hero/heroBg.png)"
-      },
+      backgroundImage: {},
       fontFamily: {
-        matter: "matter",
+        satoshi: "satoshi",
+        general: "general",
       },
       colors: {
-        blackShade:"#2a2c2d",
-        skin:"#dcb688"
-        
+        greyBg: "#1d1f21",
+        whiteShade: "#e7e7e7",
+        grayShade: "#909090",
       },
     },
   },
   plugins: [],
-}
+};

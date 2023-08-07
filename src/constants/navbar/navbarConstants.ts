@@ -5,4 +5,5 @@ export const navLinks: navLinksType[] = [
   { title: "Portfolio", link: "portfolio" },
   { title: "Contact", link: "contact" },
   { title: "About", link: "about" },
+  { title: "Resume", link: "Resume" },
 ];
