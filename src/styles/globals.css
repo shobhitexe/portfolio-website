@@ -5,12 +5,17 @@
 
 
 @font-face {
-    font-family: matter;
-    src: url("/fonts/MatterMedium.ttf");
+    font-family: satoshi;
+    src: url("/fonts/satoshi.ttf");
+}
+
+@font-face {
+    font-family: general;
+    src: url("/fonts/general.ttf");
 }
 
 
 html{
     overflow-x: hidden;
-    background-color: black;
+    background-color: #1d1f21;
 }
