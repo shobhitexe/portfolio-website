@@ -47,7 +47,7 @@ export default function NavBarOpen() {
               <Link
                 href={nav.link}
                 target={nav.link === "Resume" ? "_blank" : ""}
-                className="flex flex-row items-center lg:gap-20 md:gap-14 gap-5 relative"
+                className="flex flex-row items-center lg:gap-20 md:gap-14 gap-5 relative select-none"
               >
                 <h1>{nav.title}</h1>
                 <h1 className="text-red-600 opacity-0 translate-y-5 absolute">
