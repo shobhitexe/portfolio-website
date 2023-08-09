@@ -12,7 +12,8 @@ import NavBarOpen from "./NavBarOpen";
 import { useDispatch } from "react-redux";
 import { setIsNavOpen } from "@/store/slices/navbarOpen";
 import NavBarHeading from "../UI/Heading/NavBarHeading";
-import { gsap } from "gsap";
+import Arrow from "../icons/Arrow";
+import Fingers from "../icons/Fingers";
 
 export default function Navbar() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
@@ -47,6 +48,8 @@ export default function Navbar() {
           label="Contact"
           buttonBg={buttonColors.white}
           circleBg={buttonColors.gray}
+          FirstSvg={Arrow}
+          SecondSvg={Fingers}
         />
         <div
           onClick={() => {

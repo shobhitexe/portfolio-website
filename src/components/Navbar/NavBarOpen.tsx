@@ -11,7 +11,6 @@ import {
   navLinksEnterAnimation,
   navLinksExitAnimation,
 } from "./NavbarAnimations";
-import { setIsNavOpen } from "@/store/slices/navbarOpen";
 
 export default function NavBarOpen() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
@@ -50,7 +49,7 @@ export default function NavBarOpen() {
                 className="flex flex-row items-center lg:gap-20 md:gap-14 gap-5 relative select-none"
               >
                 <h1>{nav.title}</h1>
-                <h1 className="text-red-600 opacity-0 translate-y-5 absolute">
+                <h1 className="text-green-500 opacity-0 translate-y-5 absolute">
                   {nav.title}
                 </h1>
                 <DiagonalArrow />

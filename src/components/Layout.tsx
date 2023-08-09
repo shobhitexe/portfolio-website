@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, [dispatch, router.asPath]);
 
   return (
-    <div className="relative">
+    <div className={`relative`}>
       {currRoute !== "/Resume" ? (
         <Fragment>
           {/* <CustomCursor /> */}

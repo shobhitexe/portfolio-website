@@ -1,6 +1,4 @@
-import Arrow from "@/components/icons/Arrow";
-import Fingers from "@/components/icons/Fingers";
-import { gsap, Elastic } from "gsap";
+import { gsap } from "gsap";
 import { useRef, MutableRefObject } from "react";
 
 export enum buttonColors {
@@ -12,9 +10,19 @@ type ButtonProps = {
   label: string;
   buttonBg: buttonColors;
   circleBg: buttonColors;
+  border?: boolean;
+  FirstSvg: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  SecondSvg: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 };
 
-export default function Button({ label, buttonBg, circleBg }: ButtonProps) {
+export default function Button({
+  label,
+  buttonBg,
+  circleBg,
+  border = false,
+  FirstSvg,
+  SecondSvg,
+}: ButtonProps) {
   const buttonRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const iconRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
@@ -57,20 +65,29 @@ export default function Button({ label, buttonBg, circleBg }: ButtonProps) {
       ref={buttonRef}
       onMouseEnter={handleButtonAnimation}
       onMouseLeave={handleButtonLeaveAnimation}
-      className={`flex items-center px-3 gap-2 py-1 cursor-pointer rounded-3xl ${buttonBg}`}
+      className={`flex items-center px-3 gap-2 py-1 cursor-pointer rounded-3xl font-general w-fit ${
+        border ? "border border-white" : ""
+      } ${buttonBg}`}
     >
-      <h1 className="font-general">{label}</h1>
+      <h1
+        className={`font-general ${
+          buttonBg === buttonColors.gray ? "text-whiteShade" : "text-greyBg"
+        }`}
+      >
+        {label}
+      </h1>
       <div
         ref={iconRef}
-        className={`flex flex-col w-6 h-6 ${circleBg} rounded-full relative`}
+        className={`flex flex-col w-6 h-6 ${circleBg} rounded-full relative
+        `}
       >
-        <Arrow
+        <FirstSvg
           width={24}
           height={24}
           color={circleBg === buttonColors.gray ? "white" : "black"}
           className="p-1 absolute rounded-full"
         />
-        <Fingers
+        <SecondSvg
           width={24}
           height={24}
           color={circleBg === buttonColors.gray ? "white" : "black"}
