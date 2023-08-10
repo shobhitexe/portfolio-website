@@ -4,33 +4,12 @@ import { buttonColors } from "../UI/Button/Button";
 import Rocket from "../icons/Rocket";
 import RocketFill from "../icons/RocketFill";
 import { RootState } from "@/store/rootReducer";
-import { MutableRefObject, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import HeroHeading from "./HeroHeading";
+import Arrow from "../icons/Arrow";
+import Fingers from "../icons/Fingers";
 
 export default function Hero() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
-
-  const textRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-  const HeroHeadingText: string = "FULL STACK JAVASCRIPT/TYPESCRIPT DEVELOPER";
-
-  useEffect(() => {
-    Array.from(textRef.current?.children!).map((span, idx) => {
-      console.log(span);
-
-      gsap.fromTo(
-        span,
-        { translateY: -200, rotationX: 180, opacity: 0 },
-        {
-          translateY: 0,
-          opacity: 1,
-          rotateX: 0,
-          duration: idx * 0.03,
-          z: "-50",
-        }
-      );
-    });
-  }, []);
 
   return (
     <div className={"flex relative flex-col mt-[200px] w-[95%] mx-auto"}>
@@ -44,27 +23,21 @@ export default function Hero() {
           SecondSvg={RocketFill}
         />
       </div>
+      <HeroHeading />
+      <div className="flex flex-col gap-5 w-full">
+        <div className="md:w-[40%] sm:w-[50%] w-full mt-10 font-general text-whiteShade md:text-[20px] sm:text-[18px] text-[15px]">
+          Crafting user-friendly web applications and automated bots and
+          dabbling in the world of Web3. Always pushing code boundaries and
+          finding creative solutions.
+        </div>
 
-      <div
-        ref={textRef}
-        className={`w-full text-whiteShade font-satoshi text-[7vw] mt-5 lg:leading-[110px] md:leading-[90px] sm:leading-[70px] ss:leading-[60px] xs:leading-[40px] leading-[30px] font-semibold ${
-          isNavOpen && "-z-50"
-        }`}
-      >
-        {Array.from(HeroHeadingText).map((text, idx) => {
-          return (
-            <span
-              className={`${
-                idx <= 10 || idx >= 32 ? "text-green-500" : "text-whiteShade"
-              } inline-block`}
-              key={idx}
-            >
-              {text}
-              {idx === 3 && <div className=""></div>}
-              {text === " " && <>&nbsp;</>}
-            </span>
-          );
-        })}
+        <Button
+          label="Contact Me"
+          buttonBg={buttonColors.white}
+          circleBg={buttonColors.gray}
+          FirstSvg={Arrow}
+          SecondSvg={Fingers}
+        />
       </div>
     </div>
   );
