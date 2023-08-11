@@ -1,11 +1,10 @@
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useRef, useEffect, MutableRefObject, useState } from "react";
-import { gsap } from "gsap";
 import {
   showCaseImages,
   showCaseImagesType,
 } from "@/constants/Showcase/showCaseConstants";
+import { scrollShowcaseAnimation } from "./showCaseAnimations";
 
 export default function Showcase() {
   const gridRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -13,35 +12,35 @@ export default function Showcase() {
   const [gridImages, setGridImages] = useState<showCaseImagesType[][]>([]);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    // console.log(gridRef.current);
-  }, []);
+    scrollShowcaseAnimation(gridRef.current!);
 
-  useEffect(() => {
+    const imagesRecurr = [];
+
+    for (let i = 0; i < 6; i++) {
+      imagesRecurr.push(...showCaseImages);
+    }
+
     const showCaseImagesRows = [
-      [...showCaseImages.sort(() => Math.random() - 0.5)],
-      [...showCaseImages.sort(() => Math.random() - 0.5)],
-      [...showCaseImages.sort(() => Math.random() - 0.5)],
+      [...imagesRecurr.sort(() => Math.random() - 0.5)],
+      [...imagesRecurr.sort(() => Math.random() - 0.5)],
+      [...imagesRecurr.sort(() => Math.random() - 0.5)],
     ];
 
     setGridImages(showCaseImagesRows);
   }, []);
 
+  console.log(gridImages);
+
   return (
-    <div className="overflow-hidden bg-black mt-40">
-      <div ref={gridRef} className="flex gap-5">
+    <div className="overflow-hidden bg-whiteShade mt-40 sm:h-screen ss:h-[400px] xs:h-[400px] h-[200px] mb-[999px]">
+      <div ref={gridRef} className="flex sm:gap-5 gap-1">
         {[0, 1, 2].map((num) => (
-          <div
-            key={num}
-            className={`${
-              num === 1 ? "-translate-y-28" : "-translate-y-14"
-            } flex flex-col gap-10`}
-          >
-            {gridImages[num]?.map((img) => (
-              <div key={img.alt}>
+          <div key={num} className={` flex flex-col sm:gap-10 gap-2`}>
+            {gridImages[num]?.map((img, idx) => (
+              <div key={Math.random() + num + idx}>
                 <Image
                   src={img.image}
-                  alt={img.alt}
+                  alt={img.alt + num}
                   width={500}
                   height={500}
                   className="rounded-md w-auto h-auto"
