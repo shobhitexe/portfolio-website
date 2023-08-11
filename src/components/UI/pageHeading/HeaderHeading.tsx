@@ -3,11 +3,13 @@ import { RootState } from "@/store/rootReducer";
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
 
-export default function HeroHeading() {
+type HeaderHeadingProps = {
+  HeroHeadingText: string;
+};
+
+export default function HeaderHeading({ HeroHeadingText }: HeaderHeadingProps) {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
   const textRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-  const HeroHeadingText: string = `FULL STACK - JAVASCRIPT DEVELOPER`;
 
   useEffect(() => {
     Array.from(textRef.current?.children!).map((span, idx) => {

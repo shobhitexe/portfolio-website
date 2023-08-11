@@ -16,7 +16,7 @@ export default function Showcase() {
 
     const imagesRecurr = [];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
       imagesRecurr.push(...showCaseImages);
     }
 
@@ -32,7 +32,7 @@ export default function Showcase() {
   console.log(gridImages);
 
   return (
-    <div className="overflow-hidden bg-whiteShade mt-40 sm:h-screen ss:h-[400px] xs:h-[400px] h-[200px] mb-[999px]">
+    <div className="overflow-hidden bg-whiteShade bg-opacity-20 mt-40 sm:h-screen ss:h-[400px] xs:h-[400px] h-[200px] mb-[999px]">
       <div ref={gridRef} className="flex sm:gap-5 gap-1">
         {[0, 1, 2].map((num) => (
           <div key={num} className={` flex flex-col sm:gap-10 gap-2`}>
