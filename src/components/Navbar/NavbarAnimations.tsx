@@ -1,7 +1,11 @@
 import { gsap } from "gsap";
 
 export function navBarAnimation(navbarRef: HTMLDivElement) {
-  gsap.fromTo(navbarRef, { opacity: 0 }, { opacity: 1, duration: 3 });
+  gsap.fromTo(
+    navbarRef,
+    { opacity: 0 },
+    { opacity: 1, duration: 3, delay: 0.5 }
+  );
 }
 
 export function navOpenBtnAnimation(

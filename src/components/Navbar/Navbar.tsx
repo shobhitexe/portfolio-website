@@ -35,9 +35,9 @@ export default function Navbar() {
   return (
     <div
       ref={navbarRef}
-      className="fixed top-0 left-0 px-10 py-5 flex justify-between items-center w-full"
+      className="fixed top-0 left-0 px-10 py-5 flex justify-between items-center w-full z-50 bg-greyBg"
     >
-      <div ref={navHeadingRef} className={`${isNavOpen && "z-[999]"} relative`}>
+      <div ref={navHeadingRef} className={`z-50 relative`}>
         <NavBarHeading />
         <div className="absolute top-0 translate-y-5 opacity-0 hover:-rotate-6 duration-500">
           <NavBarHeading />

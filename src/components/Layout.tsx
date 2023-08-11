@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, [dispatch, router.asPath]);
 
   return (
-    <div className={`relative`}>
+    <div>
       {currRoute !== "/Resume" ? (
         <Fragment>
           {/* <CustomCursor /> */}
@@ -26,7 +26,6 @@ export default function Layout({ children }: { children: ReactNode }) {
       ) : (
         <Fragment />
       )}
-
       {children}
     </div>
   );

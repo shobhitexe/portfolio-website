@@ -1,11 +1,11 @@
 import { navLinks } from "@/constants/navbar/navbarConstants";
 import DiagonalArrow from "../icons/DiagonalArrow";
 import { useRef, useEffect, MutableRefObject } from "react";
-import { gsap } from "gsap";
+
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/rootReducer";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
+
 import {
   navBarSliderOpenAnimation,
   navLinksEnterAnimation,
