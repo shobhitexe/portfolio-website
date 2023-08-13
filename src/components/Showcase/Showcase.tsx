@@ -29,13 +29,11 @@ export default function Showcase() {
     setGridImages(showCaseImagesRows);
   }, []);
 
-  console.log(gridImages);
-
   return (
-    <div className="overflow-hidden bg-whiteShade bg-opacity-20 mt-40 sm:h-screen ss:h-[400px] xs:h-[400px] h-[200px] mb-[999px]">
+    <div className="overflow-hidden bg-whiteShade bg-opacity-20 mt-40 sm:h-screen ss:h-[400px] xs:h-[400px] h-[200px]">
       <div ref={gridRef} className="flex sm:gap-5 gap-1">
         {[0, 1, 2].map((num) => (
-          <div key={num} className={` flex flex-col sm:gap-10 gap-2`}>
+          <div key={num} className={` flex flex-col sm:gap-5 gap-2`}>
             {gridImages[num]?.map((img, idx) => (
               <div key={Math.random() + num + idx}>
                 <Image
