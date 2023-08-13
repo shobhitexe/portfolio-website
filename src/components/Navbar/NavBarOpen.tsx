@@ -1,4 +1,4 @@
-import { navLinks } from "@/constants/navbar/navbarConstants";
+import { navLinks } from "./navbarConstants";
 import DiagonalArrow from "../icons/DiagonalArrow";
 import { useRef, useEffect, MutableRefObject } from "react";
 

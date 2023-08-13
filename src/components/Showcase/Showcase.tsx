@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { useRef, useEffect, MutableRefObject, useState } from "react";
-import {
-  showCaseImages,
-  showCaseImagesType,
-} from "@/constants/Showcase/showCaseConstants";
+import { showCaseImages, showCaseImagesType } from "./showCaseConstants";
 import { scrollShowcaseAnimation } from "./showCaseAnimations";
 
 export default function Showcase() {
@@ -35,7 +32,7 @@ export default function Showcase() {
         {[0, 1, 2].map((num) => (
           <div key={num} className={` flex flex-col sm:gap-5 gap-2`}>
             {gridImages[num]?.map((img, idx) => (
-              <div key={Math.random() + num + idx}>
+              <div key={Math.random() + num + idx} className="shadow-xl">
                 <Image
                   src={img.image}
                   alt={img.alt + num}
