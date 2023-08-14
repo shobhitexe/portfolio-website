@@ -52,12 +52,11 @@ export default function AboutSection() {
 
         <div ref={paraRef} className="flex flex-col w-fit gap-5">
           <h1 className="font-general font-medium text-whiteShade">
-            Hello, I&apos;m Shobhit, a dedicated freelance web designer and
-            skilled developer based in parts unknown. I take pride in crafting
-            exceptional projects. My expertise encompasses JavaScript and
-            TypeScript, including proficiency in React, Next.js, Express, and
-            Node.js. By blending design and code, I bring digital visions to
-            life with excellence.
+            Hello, I&apos;m Shobhit, a dedicated developer based in parts
+            unknown. I take pride in crafting exceptional projects. My expertise
+            encompasses JavaScript and TypeScript, including proficiency in
+            React, Next.js, Express, and Node.js. By blending design and code, I
+            bring digital visions to life with excellence.
           </h1>
           <p className="font-general text-whiteShade">
             Driven by a passion for technology and a keen focus on web design
