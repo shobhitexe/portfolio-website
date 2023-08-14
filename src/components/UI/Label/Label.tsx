@@ -1,7 +1,7 @@
 export enum labelColors {
   green = "bg-green-500",
   gray = "bg-grayShade",
-  transparant = "bg-greyBg",
+  transparant = "bg-transparent",
 }
 
 type LabelProps = {
