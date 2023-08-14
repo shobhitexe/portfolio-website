@@ -24,6 +24,7 @@ module.exports = {
         greyBg: "#1d1f21",
         whiteShade: "#e7e7e7",
         grayShade: "#909090",
+        lightGray: "#292b2d",
       },
     },
   },

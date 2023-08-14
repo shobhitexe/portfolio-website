@@ -1,23 +1,18 @@
 import Label, { labelColors } from "../UI/Label/Label";
 import SlideText from "../UI/SlideText/SlideText";
 import { selectedWorks } from "./WorkConstants";
-import Image from "next/image";
+import RevealImage, { RevealColorColors } from "../UI/RevealImage/RevealImage";
 
 export default function WorksGrid() {
   return (
     <div className="grid sm:grid-cols-2 grid-cols-1 gap-10">
       {selectedWorks.map((work) => (
-        <div key={work.alt} className="flex flex-col gap-5">
-          <div className="overflow-hidden rounded-2xl">
-            <Image
-              src={work.image}
-              alt={work.alt}
-              width={1000}
-              height={1000}
-              className="rounded-2xl cursor-pointer hover:scale-105 duration-300"
-            />
-          </div>
-
+        <div key={work.alt} className="flex flex-col gap-5 ">
+          <RevealImage
+            image={work.image}
+            alt={work.alt}
+            cover={RevealColorColors.lightGrey}
+          />
           <div className="flex items-center justify-between">
             <SlideText
               label={work.title}
