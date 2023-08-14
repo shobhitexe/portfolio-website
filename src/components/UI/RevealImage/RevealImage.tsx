@@ -24,8 +24,6 @@ export default function RevealImage({
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.log(imageRef.current?.children[0]);
-
     gsap.to(imageRef.current?.children[0]!, {
       translateX: -700,
       delay: 1,
