@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 export enum SlideTextColors {
   white = "text-whiteShade",
   gray = "text-grayShade",
+  black = "text-black",
 }
 
 type SlideTextProps = {
