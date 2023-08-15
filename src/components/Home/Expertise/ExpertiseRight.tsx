@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { expertiseCards } from "./ExpertiseConstants";
-import Label, { labelColors } from "../UI/Label/Label";
+import Label, { labelColors } from "../../UI/Label/Label";
 
 export default function ExpertiseRight() {
   return (

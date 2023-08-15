@@ -1,10 +1,10 @@
 import { MutableRefObject, useEffect, useRef } from "react";
-import Button, { buttonColors } from "../UI/Button/Button";
-import Label, { labelColors } from "../UI/Label/Label";
-import SlideText, { SlideTextColors } from "../UI/SlideText/SlideText";
-import Arrow from "../icons/Arrow";
-import Eye from "../icons/Eye";
-import Fingers from "../icons/Fingers";
+import Button, { buttonColors } from "../../UI/Button/Button";
+import Label, { labelColors } from "../../UI/Label/Label";
+import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
+import Arrow from "../../icons/Arrow";
+import Eye from "../../icons/Eye";
+import Fingers from "../../icons/Fingers";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 

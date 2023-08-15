@@ -1,7 +1,9 @@
-import Label, { labelColors } from "../UI/Label/Label";
-import SlideText from "../UI/SlideText/SlideText";
+import Label, { labelColors } from "../../UI/Label/Label";
+import SlideText from "../../UI/SlideText/SlideText";
 import { selectedWorks } from "./WorkConstants";
-import RevealImage, { RevealColorColors } from "../UI/RevealImage/RevealImage";
+import RevealImage, {
+  RevealColorColors,
+} from "../../UI/RevealImage/RevealImage";
 
 export default function WorksGrid() {
   return (

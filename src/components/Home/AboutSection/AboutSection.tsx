@@ -1,10 +1,10 @@
 import { AboutSectionLinks } from "./AboutSectionConstants";
-import Label, { labelColors } from "../UI/Label/Label";
+import Label, { labelColors } from "../../UI/Label/Label";
 import Image from "next/image";
-import Button from "../UI/Button/Button";
-import { buttonColors } from "../UI/Button/Button";
-import Arrow from "../icons/Arrow";
-import Eye from "../icons/Eye";
+import Button from "../../UI/Button/Button";
+import { buttonColors } from "../../UI/Button/Button";
+import Arrow from "../../icons/Arrow";
+import Eye from "../../icons/Eye";
 import { MutableRefObject, useEffect, useRef } from "react";
 
 import {

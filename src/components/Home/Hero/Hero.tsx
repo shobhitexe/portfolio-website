@@ -1,12 +1,12 @@
-import Button from "../UI/Button/Button";
-import { buttonColors } from "../UI/Button/Button";
-import Rocket from "../icons/Rocket";
-import RocketFill from "../icons/RocketFill";
+import Button from "../../UI/Button/Button";
+import { buttonColors } from "../../UI/Button/Button";
+import Rocket from "../../icons/Rocket";
+import RocketFill from "../../icons/RocketFill";
 import { useRef, useEffect, MutableRefObject } from "react";
 import { heroRevealAnimation } from "./HeroAnimations";
-import PageHeader from "../UI/pageHeading/PageHeader";
-import Arrow from "../icons/Arrow";
-import Fingers from "../icons/Fingers";
+import PageHeader from "../../UI/pageHeading/PageHeader";
+import Arrow from "../../icons/Arrow";
+import Fingers from "../../icons/Fingers";
 
 export default function Hero() {
   const buttonRef: MutableRefObject<HTMLDivElement | null> = useRef(null);

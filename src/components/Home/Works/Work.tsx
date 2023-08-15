@@ -1,8 +1,8 @@
-import Button, { buttonColors } from "../UI/Button/Button";
-import Label, { labelColors } from "../UI/Label/Label";
-import SlideText, { SlideTextColors } from "../UI/SlideText/SlideText";
-import Arrow from "../icons/Arrow";
-import Eye from "../icons/Eye";
+import Button, { buttonColors } from "../../UI/Button/Button";
+import Label, { labelColors } from "../../UI/Label/Label";
+import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
+import Arrow from "../../icons/Arrow";
+import Eye from "../../icons/Eye";
 import WorksGrid from "./WorksGrid";
 
 export default function Work() {
