@@ -9,7 +9,7 @@ export default function ExpertiseRight() {
         return (
           <div
             key={card.title}
-            className={`md:w-[80%] sticky border mx-auto h-full flex flex-col bg-greyBg gap-10 mt-10 ss:py-10 max-ss:pb-7 max-ss:pt-3 px-5 rounded-2xl text-whiteShade`}
+            className={`md:w-[80%] sticky border border-whiteShade border-opacity-30 mx-auto h-full flex flex-col bg-greyBg gap-10 mt-10 ss:py-10 max-ss:pb-7 max-ss:pt-3 px-5 rounded-2xl text-whiteShade`}
             style={{ top: String(20 + idx * 2) + "%" }}
           >
             <div className="flex ss:flex-row flex-col ss:gap-7">
@@ -26,27 +26,12 @@ export default function ExpertiseRight() {
                 </h1>
                 <div className="flex gap-3 flex-wrap">
                   {card.tags.map((tag, idx) => {
-                    const arr: labelColors[] = [
-                      labelColors.gray,
-                      labelColors.green,
-                      labelColors.transparant,
-                    ];
-
-                    const selectedColor: labelColors =
-                      idx === Math.floor(Math.random() * arr.length)
-                        ? arr[idx]
-                        : arr[idx - 1] || arr[idx + 1];
-
                     return (
                       <Label
                         title={tag}
                         key={tag}
-                        labelBg={selectedColor}
-                        styles={`${
-                          selectedColor === labelColors.transparant
-                            ? "border border-whiteShade"
-                            : ""
-                        } text-whiteShade`}
+                        labelBg={labelColors.transparant}
+                        styles={`border border-whiteShade text-whiteShade`}
                       />
                     );
                   })}
