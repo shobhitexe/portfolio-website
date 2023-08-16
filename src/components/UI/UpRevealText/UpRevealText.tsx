@@ -27,7 +27,7 @@ export default function UpRevealText({
         },
       }
     );
-  }, []);
+  }, [YShift]);
 
   return (
     <div ref={textRef} className={`font-general ${styles}`}>
