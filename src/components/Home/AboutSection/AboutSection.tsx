@@ -11,18 +11,13 @@ import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
 import { MutableRefObject, useEffect, useRef } from "react";
 
-import {
-  imageRevealAnimation,
-  paragraphsRevealAnimation,
-} from "./AboutSectionAnimations";
+import { imageRevealAnimation } from "./AboutSectionAnimations";
 import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
 
 export default function AboutSection() {
-  const paraRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const imageRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
-    paragraphsRevealAnimation(paraRef.current!);
     imageRevealAnimation(imageRef.current!);
   }, []);
 
@@ -55,7 +50,7 @@ export default function AboutSection() {
           />
         </div>
 
-        <div ref={paraRef} className="flex flex-col w-fit gap-5">
+        <div className="flex flex-col w-fit gap-5">
           <UpRevealText label={headingParagraph1} styles="font-medium" />
           <UpRevealText label={headingParagraph2} />
           <Button
