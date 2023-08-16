@@ -14,7 +14,7 @@ export default function Work() {
           <div className="sm:w-[50%] w-full">
             <SlideText
               label="A FEW SELECTED WORKS"
-              style="sm:text-[40px] text-[30px] font-medium text-whiteShade"
+              style="md:text-[40px] text-[30px] font-medium text-whiteShade"
               colorOne={SlideTextColors.white}
               colorTwo={SlideTextColors.gray}
               highlightedText={5}

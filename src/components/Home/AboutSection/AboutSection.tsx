@@ -1,4 +1,8 @@
-import { AboutSectionLinks } from "./AboutSectionConstants";
+import {
+  AboutSectionLinks,
+  headingParagraph1,
+  headingParagraph2,
+} from "./AboutSectionConstants";
 import Label, { labelColors } from "../../UI/Label/Label";
 import Image from "next/image";
 import Button from "../../UI/Button/Button";
@@ -11,6 +15,7 @@ import {
   imageRevealAnimation,
   paragraphsRevealAnimation,
 } from "./AboutSectionAnimations";
+import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
 
 export default function AboutSection() {
   const paraRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -51,21 +56,8 @@ export default function AboutSection() {
         </div>
 
         <div ref={paraRef} className="flex flex-col w-fit gap-5">
-          <h1 className="font-general font-medium text-whiteShade">
-            Hello, I&apos;m Shobhit, a dedicated developer based in parts
-            unknown. I take pride in crafting exceptional projects. My expertise
-            encompasses JavaScript and TypeScript, including proficiency in
-            React, Next.js, Express, and Node.js. By blending design and code, I
-            bring digital visions to life with excellence.
-          </h1>
-          <p className="font-general text-whiteShade">
-            Driven by a passion for technology and a keen focus on web design
-            and as a novice fullstack developer, I shape captivating digital
-            experiences that generate value for my clients and their customers.
-            I firmly believe in a collaborative approach to my work, working
-            closely with my clients to ensure that each project caters to their
-            unique needs and goes beyond their expectations.
-          </p>
+          <UpRevealText label={headingParagraph1} styles="font-medium" />
+          <UpRevealText label={headingParagraph2} />
           <Button
             label="Read More"
             buttonBg={buttonColors.gray}
