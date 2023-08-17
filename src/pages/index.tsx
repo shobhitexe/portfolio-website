@@ -4,6 +4,7 @@ import {
   Hero,
   Showcase,
   Skills,
+  Values,
   Work,
 } from "@/components";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Work />
       <Expertise />
+      <Values />
     </div>
   );
 }
