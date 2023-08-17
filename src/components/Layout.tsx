@@ -6,6 +6,7 @@ import { CustomCursor } from "./Cursor/Cursor";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/rootReducer";
 import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Fragment />
       )}
       {children}
+      <Footer />
     </div>
   );
 }

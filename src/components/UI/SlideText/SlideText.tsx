@@ -49,7 +49,7 @@ export default function SlideText({
   }, []);
 
   return (
-    <div ref={textRef} className={`font-satoshi flex ${style}`}>
+    <div ref={textRef} className={`font-satoshi flex relative ${style}`}>
       {Array.from(label).map((text, idx) => {
         return (
           <div
