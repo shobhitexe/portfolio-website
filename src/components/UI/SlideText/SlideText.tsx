@@ -14,6 +14,8 @@ type SlideTextProps = {
   highlightedText?: number;
   colorOne?: SlideTextColors;
   colorTwo?: SlideTextColors;
+  start?: string;
+  end?: string;
 };
 
 export default function SlideText({
@@ -22,6 +24,8 @@ export default function SlideText({
   highlightedText,
   colorOne,
   colorTwo,
+  start = "20% bottom",
+  end = "20% bottom",
 }: SlideTextProps) {
   const textRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
@@ -39,8 +43,8 @@ export default function SlideText({
           delay: 0.3,
           scrollTrigger: {
             trigger: text,
-            start: "20% bottom",
-            end: "30% bottom",
+            start: start,
+            end: end,
             scrub: 3,
           },
         }
