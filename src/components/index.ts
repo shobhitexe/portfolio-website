@@ -1,3 +1,4 @@
+import Contact from "./Contact/Contact";
 import AboutSection from "./Home/AboutSection/AboutSection";
 import Expertise from "./Home/Expertise/Expertise";
 import Hero from "./Home/Hero/Hero";
@@ -6,4 +7,13 @@ import Skills from "./Home/Skills/Skills";
 import Values from "./Home/Values/Values";
 import Work from "./Home/Works/Work";
 
-export { Hero, Showcase, AboutSection, Skills, Work, Expertise, Values };
+export {
+  Hero,
+  Showcase,
+  AboutSection,
+  Skills,
+  Work,
+  Expertise,
+  Values,
+  Contact,
+};

@@ -1,5 +1,6 @@
 import {
   AboutSection,
+  Contact,
   Expertise,
   Hero,
   Showcase,
@@ -18,6 +19,7 @@ export default function Home() {
       <Work />
       <Expertise />
       <Values />
+      <Contact />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
 
 export default function Values() {
   return (
-    <div className="pb-[999px] mt-28 flex flex-col gap-24 w-[90%] mx-auto">
+    <div className="mt-28 flex flex-col gap-24 w-[90%] mx-auto">
       <div className="flex sm:flex-row flex-col items-start justify-between">
         <Label title="Values" labelBg={labelColors.green} />
         <div className="flex flex-col md:w-[50%] sm:w-[70%]">
