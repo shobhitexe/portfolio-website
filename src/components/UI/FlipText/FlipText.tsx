@@ -1,13 +1,23 @@
 import { MutableRefObject, useRef } from "react";
 import { gsap } from "gsap";
+import { useRouter } from "next/router";
 
 type FlipTextProps = {
   title: string;
   size: string;
+  href?: string;
+  openInNew?: boolean;
 };
 
-export default function FlipText({ title, size }: FlipTextProps) {
+export default function FlipText({
+  title,
+  size,
+  href,
+  openInNew = false,
+}: FlipTextProps) {
   const flipTextRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+  const router = useRouter();
 
   function handleFlipTextAnimationEnter() {
     gsap.to(flipTextRef.current?.children[0]!, {
@@ -43,6 +53,14 @@ export default function FlipText({ title, size }: FlipTextProps) {
 
   return (
     <div
+      onClick={() => {
+        if (!href) return;
+        if (openInNew) {
+          window.open(href, "_blank");
+        } else {
+          router.push(href);
+        }
+      }}
       onMouseEnter={handleFlipTextAnimationEnter}
       onMouseLeave={handleFlipTextAnimationExit}
       ref={flipTextRef}

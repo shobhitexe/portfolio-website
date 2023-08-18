@@ -15,14 +15,23 @@ export default function Footer() {
               <div className="flex flex-col gap-10">
                 {navLinks.map((link) => (
                   <div key={link.title} className="cursor-pointer">
-                    <FlipText title={link.title} size="text-[15px]" />
+                    <FlipText
+                      title={link.title}
+                      size="text-[15px]"
+                      href={link.link}
+                    />
                   </div>
                 ))}
               </div>
               <div className="flex flex-col gap-10">
                 {AboutSectionLinks.map((link) => (
                   <div key={link.title} className="cursor-pointer">
-                    <FlipText title={link.title} size="text-[15px]" />
+                    <FlipText
+                      title={link.title}
+                      size="text-[15px]"
+                      href={link.url}
+                      openInNew={true}
+                    />
                   </div>
                 ))}
               </div>
@@ -33,6 +42,7 @@ export default function Footer() {
             title="sguptamds94@gmail.com"
             labelBg={labelColors.transparant}
             styles="hover:bg-whiteShade hover:text-greyBg hover:border-greyBg duration-500 max-ss:text-[10px] max-ss:mt-10"
+            href="mailto:sguptamds94@gmail.com"
           />
         </div>
         <div className="h-[0.5px] opacity-30 w-full bg-whiteShade"></div>

@@ -34,6 +34,7 @@ export default function AboutSection() {
                 labelBg={labelColors.transparant}
                 key={link.title}
                 styles="hover:bg-whiteShade hover:text-greyBg duration-500"
+                href={link.url}
               />
             ))}
           </div>

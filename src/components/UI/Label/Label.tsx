@@ -8,11 +8,15 @@ type LabelProps = {
   title: string;
   labelBg: labelColors;
   styles?: string;
+  href?: string;
 };
 
-export default function Label({ title, labelBg, styles }: LabelProps) {
+export default function Label({ title, labelBg, styles, href }: LabelProps) {
   return (
     <div
+      onClick={() => {
+        href && window.open(href, "_blank");
+      }}
       className={`${labelBg} w-fit px-4 py-0.5 ${
         labelBg === labelColors.transparant
           ? "text-whiteShade border"
