@@ -18,6 +18,9 @@ type PageHeaderProps = {
   buttonTwoBtnBg?: buttonColors;
   buttonOneText: string;
   buttonTwoText?: string;
+  startHighlight?: number;
+  endHighlight?: number;
+  indexHero: boolean;
 };
 
 export default function PageHeader({
@@ -34,6 +37,9 @@ export default function PageHeader({
   buttonTwoBtnBg,
   buttonOneText,
   buttonTwoText,
+  startHighlight,
+  endHighlight,
+  indexHero,
 }: PageHeaderProps) {
   const heroParaRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
@@ -43,7 +49,12 @@ export default function PageHeader({
 
   return (
     <div>
-      <HeaderHeading HeroHeadingText={headText} />
+      <HeaderHeading
+        HeroHeadingText={headText}
+        startHighlight={startHighlight}
+        endHighlight={endHighlight}
+        indexHero={indexHero}
+      />
       <div ref={heroParaRef} className="flex flex-col gap-5 w-full">
         <div className="md:w-[40%] sm:w-[50%] w-full mt-10 font-general text-whiteShade md:text-[20px] sm:text-[18px] text-[15px]">
           {headDesc}
@@ -55,6 +66,7 @@ export default function PageHeader({
             circleBg={buttonOneCircleBg}
             FirstSvg={SvgOne}
             SecondSvg={SvgTwo}
+            border={buttonOneBtnBg === buttonColors.gray ? true : false}
           />
           {TwoButtons && (
             <Button
@@ -63,6 +75,7 @@ export default function PageHeader({
               circleBg={buttonTwoCircleBg!}
               FirstSvg={SvgThree!}
               SecondSvg={SvgFour!}
+              border={buttonOneBtnBg === buttonColors.gray ? true : false}
             />
           )}
         </div>

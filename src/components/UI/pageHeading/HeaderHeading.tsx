@@ -5,25 +5,45 @@ import { gsap } from "gsap";
 
 type HeaderHeadingProps = {
   HeroHeadingText: string;
+  startHighlight?: number;
+  endHighlight?: number;
+  indexHero: boolean;
 };
 
-export default function HeaderHeading({ HeroHeadingText }: HeaderHeadingProps) {
+export default function HeaderHeading({
+  HeroHeadingText,
+  startHighlight = 10,
+  endHighlight = 23,
+  indexHero,
+}: HeaderHeadingProps) {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
   const textRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
     Array.from(textRef.current?.children!).map((span, idx) => {
-      gsap.fromTo(
-        span,
-        { translateY: idx <= 23 ? "-300" : "-250" },
-        {
-          translateY: 0,
-          delay: idx <= 23 ? 0.04 : 0.1,
-          duration: idx <= 23 ? idx * 0.05 + 0.4 : (idx - 23) * 0.1,
-        }
-      );
+      if (Boolean(indexHero)) {
+        gsap.fromTo(
+          span,
+          { translateY: idx <= 23 ? "-300" : "-250" },
+          {
+            translateY: 0,
+            delay: idx <= 23 ? 0.04 : 0.1,
+            duration: idx <= 23 ? idx * 0.05 + 0.4 : (idx - 23) * 0.1,
+          }
+        );
+      } else {
+        gsap.fromTo(
+          span,
+          { translateY: "-300" },
+          {
+            translateY: 0,
+            delay: 0.04,
+            duration: idx * 0.05 + 0.4,
+          }
+        );
+      }
     });
-  }, []);
+  }, [indexHero]);
   return (
     <div
       ref={textRef}
@@ -36,7 +56,9 @@ export default function HeaderHeading({ HeroHeadingText }: HeaderHeadingProps) {
         return (
           <span
             className={`${
-              idx <= 10 || idx >= 23 ? "text-green-500" : "text-whiteShade"
+              idx <= startHighlight || idx >= endHighlight
+                ? "text-green-500"
+                : "text-whiteShade"
             } inline-block`}
             key={idx}
           >
