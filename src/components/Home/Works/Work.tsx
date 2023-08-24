@@ -3,8 +3,8 @@ import Label, { labelColors } from "../../UI/Label/Label";
 import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
-import WorksGrid from "./WorksGrid";
-
+import { selectedWorks } from "./WorkConstants";
+import WorksGrid from "@/components/UI/WorksGrid/WorksGrid";
 export default function Work() {
   return (
     <div className="mt-28 bg-grayShade bg-opacity-10 py-10">
@@ -26,7 +26,7 @@ export default function Work() {
             </p>
           </div>
         </div>
-        <WorksGrid />
+        <WorksGrid worksArray={selectedWorks} />
         <Button
           label="View All Projects"
           buttonBg={buttonColors.white}

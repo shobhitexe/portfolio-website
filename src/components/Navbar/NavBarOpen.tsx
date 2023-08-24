@@ -1,16 +1,16 @@
 import { navLinks } from "./navbarConstants";
 import DiagonalArrow from "../icons/DiagonalArrow";
 import { useRef, useEffect, MutableRefObject } from "react";
-
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/rootReducer";
 import Link from "next/link";
-
 import {
   navBarSliderOpenAnimation,
   navLinksEnterAnimation,
   navLinksExitAnimation,
 } from "./NavbarAnimations";
+import { useDispatch } from "react-redux";
+import { setIsNavOpen } from "@/store/slices/navbarOpen";
 
 export default function NavBarOpen() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
@@ -21,6 +21,8 @@ export default function NavBarOpen() {
   useEffect(() => {
     navBarSliderOpenAnimation(navBarRef.current!, titleRef.current!);
   }, [isNavOpen]);
+
+  const dispatch = useDispatch();
 
   return (
     <div className="fixed w-full left-0 sm:h-1/2 h-fit top-3 mx-auto">
@@ -38,6 +40,7 @@ export default function NavBarOpen() {
                 navLinksEnterAnimation(titleRef.current!, idx)
               }
               onMouseLeave={() => navLinksExitAnimation(titleRef.current!, idx)}
+              onClick={() => dispatch(setIsNavOpen())}
               className={`text-[30px] cursor-pointer flex flex-row w-full justify-center pb-10 ${
                 idx + 1 === navLinks.length ? "" : "border-r"
               } items-end max-sm:border-t border-whiteShade border-opacity-30 pt-10`}

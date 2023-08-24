@@ -1,4 +1,4 @@
-type selectedWorksType = { title: string; image: string; alt: string };
+export type selectedWorksType = { title: string; image: string; alt: string };
 
 const selectedWorksBaseUrl: string = "/images/showcase";
 

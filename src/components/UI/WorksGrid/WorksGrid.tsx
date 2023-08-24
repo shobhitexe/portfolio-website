@@ -1,14 +1,14 @@
-import Label, { labelColors } from "../../UI/Label/Label";
-import SlideText from "../../UI/SlideText/SlideText";
-import { selectedWorks } from "./WorkConstants";
-import RevealImage, {
-  RevealColorColors,
-} from "../../UI/RevealImage/RevealImage";
+import Label, { labelColors } from "../Label/Label";
+import SlideText from "../SlideText/SlideText";
+import RevealImage, { RevealColorColors } from "../RevealImage/RevealImage";
+import { selectedWorksType } from "@/components/Home/Works/WorkConstants";
 
-export default function WorksGrid() {
+type WorksGridProps = { worksArray: selectedWorksType[] };
+
+export default function WorksGrid({ worksArray }: WorksGridProps) {
   return (
     <div className="grid sm:grid-cols-2 grid-cols-1 gap-10">
-      {selectedWorks.map((work) => (
+      {worksArray.map((work) => (
         <div key={work.alt} className="flex flex-col gap-5 ">
           <RevealImage
             image={work.image}

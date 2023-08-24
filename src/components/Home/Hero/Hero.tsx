@@ -37,6 +37,7 @@ export default function Hero() {
         buttonOneBtnBg={buttonColors.white}
         buttonOneCircleBg={buttonColors.gray}
         buttonOneText="Contact Me"
+        indexHero={true}
       />
     </div>
   );
