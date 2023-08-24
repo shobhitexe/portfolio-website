@@ -1,6 +1,5 @@
 import WorksGrid from "@/components/UI/WorksGrid/WorksGrid";
 import { AllWorksData } from "./AllWorksConstants";
-import { useEffect, useState } from "react";
 
 export default function AllWorks() {
   return (
