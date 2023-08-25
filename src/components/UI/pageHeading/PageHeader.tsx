@@ -3,19 +3,14 @@ import { buttonColors } from "../Button/Button";
 import { useRef, MutableRefObject, useEffect } from "react";
 import HeaderHeading from "./HeaderHeading";
 import { pageHeadRevealAnimation } from "./pageHeadAnimations";
+import Arrow from "@/components/icons/Arrow";
+import Fingers from "@/components/icons/Fingers";
+import Eye from "@/components/icons/Eye";
 
 type PageHeaderProps = {
   headText: string;
   headDesc: string;
   TwoButtons?: boolean;
-  SvgOne: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  SvgTwo: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  SvgThree?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  SvgFour?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  buttonOneCircleBg: buttonColors;
-  buttonOneBtnBg: buttonColors;
-  buttonTwoCircleBg?: buttonColors;
-  buttonTwoBtnBg?: buttonColors;
   buttonOneText: string;
   buttonTwoText?: string;
   startHighlight?: number;
@@ -27,14 +22,6 @@ export default function PageHeader({
   headText,
   headDesc,
   TwoButtons = false,
-  SvgOne,
-  SvgTwo,
-  SvgThree,
-  SvgFour,
-  buttonOneCircleBg,
-  buttonOneBtnBg,
-  buttonTwoCircleBg,
-  buttonTwoBtnBg,
   buttonOneText,
   buttonTwoText,
   startHighlight,
@@ -62,20 +49,20 @@ export default function PageHeader({
         <div className="flex flex-row gap-2">
           <Button
             label={buttonOneText}
-            buttonBg={buttonOneBtnBg}
-            circleBg={buttonOneCircleBg}
-            FirstSvg={SvgOne}
-            SecondSvg={SvgTwo}
-            border={buttonOneBtnBg === buttonColors.gray ? true : false}
+            buttonBg={buttonColors.gray}
+            circleBg={buttonColors.white}
+            FirstSvg={Arrow}
+            SecondSvg={Fingers}
+            border={true}
           />
           {TwoButtons && (
             <Button
               label={buttonTwoText!}
-              buttonBg={buttonTwoBtnBg!}
-              circleBg={buttonTwoCircleBg!}
-              FirstSvg={SvgThree!}
-              SecondSvg={SvgFour!}
-              border={buttonOneBtnBg === buttonColors.gray ? true : false}
+              buttonBg={buttonColors.white}
+              circleBg={buttonColors.gray}
+              FirstSvg={Arrow}
+              SecondSvg={Eye}
+              border={false}
             />
           )}
         </div>

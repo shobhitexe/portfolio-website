@@ -5,8 +5,6 @@ import RocketFill from "../../icons/RocketFill";
 import { useRef, useEffect, MutableRefObject } from "react";
 import { heroRevealAnimation } from "./HeroAnimations";
 import PageHeader from "../../UI/pageHeading/PageHeader";
-import Arrow from "../../icons/Arrow";
-import Fingers from "../../icons/Fingers";
 
 export default function Hero() {
   const buttonRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -32,10 +30,6 @@ export default function Hero() {
         headDesc="Crafting user-friendly web applications and automated bots and
           dabbling in the world of Web3. Always pushing code boundaries and
           finding creative solutions."
-        SvgOne={Arrow}
-        SvgTwo={Fingers}
-        buttonOneBtnBg={buttonColors.white}
-        buttonOneCircleBg={buttonColors.gray}
         buttonOneText="Contact Me"
         indexHero={true}
       />
