@@ -6,6 +6,9 @@ import Showcase from "./Home/Showcase/Showcase";
 import Skills from "./Home/Skills/Skills";
 import Values from "./Home/Values/Values";
 import Work from "./Home/Works/Work";
+import AboutHead from "./About/AboutHead";
+import AllWorks from "./Portfolio/AllWorks/AllWorks";
+import PortfolioHero from "./Portfolio/PortfolioHero";
 
 export {
   Hero,
@@ -16,4 +19,7 @@ export {
   Expertise,
   Values,
   Contact,
+  AboutHead,
+  AllWorks,
+  PortfolioHero,
 };

@@ -1,6 +1,4 @@
-import { Contact } from "@/components";
-import AllWorks from "@/components/Portfolio/AllWorks/AllWorks";
-import PortfolioHero from "@/components/Portfolio/PortfolioHero";
+import { Contact, AllWorks, PortfolioHero } from "@/components";
 
 export default function Portfolio() {
   return (

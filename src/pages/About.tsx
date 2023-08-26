@@ -1,5 +1,4 @@
-import { Contact } from "@/components";
-import AboutHead from "@/components/About/AboutHead";
+import { Contact, AboutHead } from "@/components";
 
 export default function About() {
   return (
