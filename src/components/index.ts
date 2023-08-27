@@ -9,6 +9,7 @@ import Work from "./Home/Works/Work";
 import AboutHead from "./About/AboutHead";
 import AllWorks from "./Portfolio/AllWorks/AllWorks";
 import PortfolioHero from "./Portfolio/PortfolioHero";
+import AboutDesc from "./About/AboutDesc";
 
 export {
   Hero,
@@ -22,4 +23,5 @@ export {
   AboutHead,
   AllWorks,
   PortfolioHero,
+  AboutDesc,
 };
