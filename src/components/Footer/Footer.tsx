@@ -17,7 +17,7 @@ export default function Footer() {
                   <div key={link.title} className="cursor-pointer">
                     <FlipText
                       title={link.title}
-                      size="text-[15px]"
+                      style="text-[15px]"
                       href={link.link}
                     />
                   </div>
@@ -28,7 +28,7 @@ export default function Footer() {
                   <div key={link.title} className="cursor-pointer">
                     <FlipText
                       title={link.title}
-                      size="text-[15px]"
+                      style="text-[15px]"
                       href={link.url}
                       openInNew={true}
                     />

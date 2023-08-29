@@ -4,14 +4,14 @@ import { useRouter } from "next/router";
 
 type FlipTextProps = {
   title: string;
-  size: string;
+  style?: string;
   href?: string;
   openInNew?: boolean;
 };
 
 export default function FlipText({
   title,
-  size,
+  style,
   href,
   openInNew = false,
 }: FlipTextProps) {
@@ -64,7 +64,7 @@ export default function FlipText({
       onMouseEnter={handleFlipTextAnimationEnter}
       onMouseLeave={handleFlipTextAnimationExit}
       ref={flipTextRef}
-      className={`${size} cursor-pointer opacity-1 px-10 relative w-10 translate-y-0`}
+      className={`${style} cursor-pointer opacity-1 px-10 relative w-10 translate-y-0`}
     >
       <h1 className="absolute">{title}</h1>
       <h1 className="text-red-600 opacity-0 translate-y-1 absolute">{title}</h1>
