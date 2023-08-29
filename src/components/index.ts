@@ -1,4 +1,3 @@
-import Contact from "./Contact/Contact";
 import AboutSection from "./Home/AboutSection/AboutSection";
 import Expertise from "./Home/Expertise/Expertise";
 import Hero from "./Home/Hero/Hero";
@@ -10,6 +9,7 @@ import AboutHead from "./About/AboutHead";
 import AllWorks from "./Portfolio/AllWorks/AllWorks";
 import PortfolioHero from "./Portfolio/PortfolioHero";
 import AboutDesc from "./About/AboutDesc";
+import ContactSection from "./ContactSection/ContactSection";
 
 export {
   Hero,
@@ -19,7 +19,7 @@ export {
   Work,
   Expertise,
   Values,
-  Contact,
+  ContactSection,
   AboutHead,
   AllWorks,
   PortfolioHero,

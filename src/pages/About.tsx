@@ -1,4 +1,4 @@
-import { Contact, AboutHead, AboutDesc, Values } from "@/components";
+import { ContactSection, AboutHead, AboutDesc, Values } from "@/components";
 
 export default function About() {
   return (
@@ -6,7 +6,7 @@ export default function About() {
       <AboutHead />
       <AboutDesc />
       <Values />
-      <Contact />
+      <ContactSection />
     </div>
   );
 }

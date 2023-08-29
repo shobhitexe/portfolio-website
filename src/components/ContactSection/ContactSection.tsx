@@ -4,7 +4,7 @@ import SlideText from "../UI/SlideText/SlideText";
 import Arrow from "../icons/Arrow";
 import Fingers from "../icons/Fingers";
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <div className="mt-28 bg-grayShade bg-opacity-10 w-full">
       <div className="w-[90%] mx-auto py-20 flex sm:flex-row flex-col max-sm:gap-5 text-whiteShade items-start justify-between">
