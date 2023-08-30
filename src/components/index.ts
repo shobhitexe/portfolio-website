@@ -10,6 +10,8 @@ import AllWorks from "./Portfolio/AllWorks/AllWorks";
 import PortfolioHero from "./Portfolio/PortfolioHero";
 import AboutDesc from "./About/AboutDesc";
 import ContactSection from "./ContactSection/ContactSection";
+import ContactLeft from "./Contact/ContactLeft";
+import ContactRight from "./Contact/ContactRight";
 
 export {
   Hero,
@@ -24,4 +26,6 @@ export {
   AllWorks,
   PortfolioHero,
   AboutDesc,
+  ContactLeft,
+  ContactRight,
 };
