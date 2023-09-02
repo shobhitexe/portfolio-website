@@ -61,6 +61,7 @@ export default function AboutSection() {
             FirstSvg={Arrow}
             border={true}
             SecondSvg={Eye}
+            redirectTo="/About"
           />
         </div>
       </div>

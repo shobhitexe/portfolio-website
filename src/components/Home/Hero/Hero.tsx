@@ -23,6 +23,7 @@ export default function Hero() {
           border={true}
           FirstSvg={Rocket}
           SecondSvg={RocketFill}
+          redirectTo="/"
         />
       </div>
       <PageHeader
@@ -32,6 +33,7 @@ export default function Hero() {
           finding creative solutions."
         buttonOneText="Contact Me"
         indexHero={true}
+        redirectOne="/Contact"
       />
     </div>
   );

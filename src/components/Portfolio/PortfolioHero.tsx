@@ -12,6 +12,8 @@ export default function PortfolioHero() {
         startHighlight={2}
         endHighlight={26}
         indexHero={false}
+        redirectOne="/Contact"
+        redirectTwo="/Resume"
       />
     </div>
   );

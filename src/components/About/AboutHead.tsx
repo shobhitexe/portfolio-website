@@ -12,6 +12,8 @@ export default function AboutHead() {
         startHighlight={4}
         endHighlight={18}
         indexHero={false}
+        redirectOne="/Contact"
+        redirectTwo="/Portfolio"
       />
     </div>
   );

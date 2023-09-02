@@ -35,6 +35,7 @@ export default function AboutDesc() {
             FirstSvg={Arrow}
             SecondSvg={Fingers}
             border={true}
+            redirectTo="/Portfolio"
           />
           <Button
             label="Resume"
@@ -42,6 +43,7 @@ export default function AboutDesc() {
             circleBg={buttonColors.gray}
             FirstSvg={Arrow}
             SecondSvg={Eye}
+            redirectTo="/Resume"
           />
         </div>
       </div>

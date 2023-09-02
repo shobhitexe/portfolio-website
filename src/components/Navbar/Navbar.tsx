@@ -50,6 +50,7 @@ export default function Navbar() {
           circleBg={buttonColors.gray}
           FirstSvg={Arrow}
           SecondSvg={Fingers}
+          redirectTo="/Contact"
         />
         <div
           onClick={() => {

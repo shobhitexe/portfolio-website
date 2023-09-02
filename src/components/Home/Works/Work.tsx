@@ -1,10 +1,12 @@
+import { AllWorksData } from "@/components/Portfolio/AllWorks/AllWorksConstants";
 import Button, { buttonColors } from "../../UI/Button/Button";
 import Label, { labelColors } from "../../UI/Label/Label";
 import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
-import { selectedWorks } from "./WorkConstants";
+
 import WorksGrid from "@/components/UI/WorksGrid/WorksGrid";
+
 export default function Work() {
   return (
     <div className="mt-28 bg-grayShade bg-opacity-10 py-10">
@@ -26,13 +28,16 @@ export default function Work() {
             </p>
           </div>
         </div>
-        <WorksGrid worksArray={selectedWorks} />
+        <WorksGrid
+          worksArray={AllWorksData.filter((data, idx) => [0, 2].includes(idx))}
+        />
         <Button
           label="View All Projects"
           buttonBg={buttonColors.white}
           circleBg={buttonColors.gray}
           FirstSvg={Arrow}
           SecondSvg={Eye}
+          redirectTo="/Portfolio"
         />
       </div>
     </div>

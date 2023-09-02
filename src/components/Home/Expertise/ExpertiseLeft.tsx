@@ -32,6 +32,7 @@ export default function ExpertiseLeft() {
           circleBg={buttonColors.white}
           FirstSvg={Arrow}
           SecondSvg={Eye}
+          redirectTo="/About"
         />
         <Button
           label="Contact Me"
@@ -39,6 +40,7 @@ export default function ExpertiseLeft() {
           circleBg={buttonColors.white}
           FirstSvg={Arrow}
           SecondSvg={Fingers}
+          redirectTo="/Contact"
         />
       </div>
     </div>

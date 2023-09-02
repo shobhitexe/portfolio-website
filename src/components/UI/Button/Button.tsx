@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { useRef, MutableRefObject } from "react";
+import Link from "next/link";
 
 export enum buttonColors {
   white = "bg-whiteShade",
@@ -11,6 +12,7 @@ type ButtonProps = {
   buttonBg: buttonColors;
   circleBg: buttonColors;
   border?: boolean;
+  redirectTo: string;
   FirstSvg: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   SecondSvg: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 };
@@ -22,8 +24,9 @@ export default function Button({
   border = false,
   FirstSvg,
   SecondSvg,
+  redirectTo,
 }: ButtonProps) {
-  const buttonRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+  const buttonRef: MutableRefObject<HTMLAnchorElement | null> = useRef(null);
   const iconRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   function handleButtonAnimation() {
@@ -61,7 +64,9 @@ export default function Button({
   }
 
   return (
-    <div
+    <Link
+      href={redirectTo}
+      target={redirectTo === "/Resume" ? "_blank" : ""}
       ref={buttonRef}
       onMouseEnter={handleButtonAnimation}
       onMouseLeave={handleButtonLeaveAnimation}
@@ -94,6 +99,6 @@ export default function Button({
           className="p-1 rounded-full absolute translate-y-2 opacity-0"
         />
       </div>
-    </div>
+    </Link>
   );
 }

@@ -16,6 +16,8 @@ type PageHeaderProps = {
   startHighlight?: number;
   endHighlight?: number;
   indexHero: boolean;
+  redirectOne: string;
+  redirectTwo?: string;
 };
 
 export default function PageHeader({
@@ -27,6 +29,8 @@ export default function PageHeader({
   startHighlight,
   endHighlight,
   indexHero,
+  redirectOne,
+  redirectTwo,
 }: PageHeaderProps) {
   const heroParaRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
@@ -54,6 +58,7 @@ export default function PageHeader({
             FirstSvg={Arrow}
             SecondSvg={Fingers}
             border={true}
+            redirectTo={redirectOne}
           />
           {TwoButtons && (
             <Button
@@ -63,6 +68,7 @@ export default function PageHeader({
               FirstSvg={Arrow}
               SecondSvg={Eye}
               border={false}
+              redirectTo={redirectTwo!}
             />
           )}
         </div>

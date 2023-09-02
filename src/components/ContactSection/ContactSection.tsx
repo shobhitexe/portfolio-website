@@ -24,6 +24,7 @@ export default function ContactSection() {
             circleBg={buttonColors.gray}
             FirstSvg={Arrow}
             SecondSvg={Fingers}
+            redirectTo="/Contact"
           />
         </div>
       </div>
