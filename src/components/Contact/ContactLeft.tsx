@@ -5,11 +5,11 @@ import Email from "../icons/Email";
 export default function ContactLeft() {
   return (
     <div className="flex flex-col gap-5">
-      <div className="text-[40px] font-satoshi font-medium flex flex-col">
+      <div className="md:text-[40px] sm:text-[35px] ss:text-[30px] text-[25px] font-satoshi font-medium flex flex-col">
         <SlideText label="HAVE AN IDEA?" style="text-grayShade" />
         <SlideText label="LET'S DO IT TOGETHER!" style="text-whiteShade" />
       </div>
-      <h1 className="font-general text-whiteShade w-[50%] text-[17px]">
+      <h1 className="font-general text-whiteShade sm:w-[50%] text-[17px]">
         Looking for a freelance web designer or developer to take your website
         to the next level? Get in touch today to learn more.
       </h1>

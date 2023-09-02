@@ -10,7 +10,7 @@ export default function AboutDesc() {
     <div className="flex sm:flex-row flex-col max-sm:gap-10 items-start w-[90%] mx-auto pb-40">
       <Label title="A few words about me" labelBg={labelColors.green} />
       <div className="flex flex-col gap-10 items-start sm:w-[70%] mx-auto justify-around">
-        <h1 className="text-whiteShade font-satoshi text-[40px] font-medium">
+        <h1 className="text-whiteShade font-satoshi md:text-[40px] sm:text-[35px] ss:text-[30px] xs:text-[25px] text-[20px] font-medium">
           As a freelance web designer and developer, I am dedicated to
           empowering forward-thinking individuals and organizations to unlock
           their growth potential.

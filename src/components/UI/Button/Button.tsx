@@ -65,7 +65,7 @@ export default function Button({
       ref={buttonRef}
       onMouseEnter={handleButtonAnimation}
       onMouseLeave={handleButtonLeaveAnimation}
-      className={`flex items-center px-3 gap-2 py-1 cursor-pointer rounded-3xl font-general w-fit ${
+      className={`flex items-center px-3 gap-2 py-1 cursor-pointer sm:text-[15px] text-[12px] rounded-3xl font-general w-fit ${
         border ? "border border-white" : ""
       } ${buttonBg}`}
     >

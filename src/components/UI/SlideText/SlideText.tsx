@@ -35,12 +35,12 @@ export default function SlideText({
     Array.from(textRef.current?.children!).map((text, idx) => {
       gsap.fromTo(
         text,
-        { opacity: 0, translateX: idx * 10 },
+        { opacity: 0, translateX: -idx * 10 },
         {
           opacity: 1,
           translateX: 0,
           duration: idx * 0.04,
-          delay: 0.3,
+          delay: 0.1,
           scrollTrigger: {
             trigger: text,
             start: start,

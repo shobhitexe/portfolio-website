@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <div
       ref={navbarRef}
-      className="fixed top-0 left-0 px-10 py-5 flex justify-between items-center w-full z-50 bg-greyBg"
+      className="fixed top-0 left-0 ss:px-10 px-5 py-5 flex justify-between items-center w-full z-50 bg-greyBg"
     >
       <div ref={navHeadingRef} className={`z-50 relative`}>
         <NavBarHeading />

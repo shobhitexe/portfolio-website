@@ -7,10 +7,16 @@ export default function Skills() {
       <h1 className="font-satoshi text-whiteShade text-[40px] text-center">
         Tech Stack
       </h1>
-      <div className="flex w-[80%] justify-center flex-wrap">
+      <div className="flex sm:w-[80%] justify-center flex-wrap">
         {skills.map((data) => (
           <div key={data.title} className="border border-whiteShade py-5 px-10">
-            <Image src={data.logo} alt={data.title} width={100} height={100} />
+            <Image
+              src={data.logo}
+              alt={data.title}
+              width={100}
+              height={100}
+              className="sm:w-20 w-10 sm:h-20 h-10"
+            />
           </div>
         ))}
       </div>

@@ -19,7 +19,7 @@ export default function Values() {
             style="lg:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-medium"
           />
           <UpRevealText
-            label=" As a freelance Full Stack developer and web designer, I embrace a
+            label="As a freelance Full Stack developer and web designer, I embrace a
             dedicated and results-driven approach for every project. I harness
             my expertise and proficiency to craft customized websites that
             perfectly match your requirements. Moreover, I proactively

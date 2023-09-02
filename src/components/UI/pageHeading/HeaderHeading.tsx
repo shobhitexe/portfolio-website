@@ -13,7 +13,7 @@ type HeaderHeadingProps = {
 export default function HeaderHeading({
   HeroHeadingText,
   startHighlight = 10,
-  endHighlight = 23,
+  endHighlight = 24,
   indexHero,
 }: HeaderHeadingProps) {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);

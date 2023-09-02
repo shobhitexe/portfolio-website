@@ -41,9 +41,9 @@ export default function NavBarOpen() {
               }
               onMouseLeave={() => navLinksExitAnimation(titleRef.current!, idx)}
               onClick={() => dispatch(setIsNavOpen())}
-              className={`text-[30px] cursor-pointer flex flex-row w-full justify-center pb-10 ${
+              className={`sm:text-[30px] text-[25px] cursor-pointer flex flex-row w-full justify-center sm:py-10 py-9 ${
                 idx + 1 === navLinks.length ? "" : "border-r"
-              } items-end max-sm:border-t border-whiteShade border-opacity-30 pt-10`}
+              } items-end max-sm:border-t border-whiteShade border-opacity-30`}
               key={nav.title}
             >
               <Link
