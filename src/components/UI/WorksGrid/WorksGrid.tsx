@@ -1,9 +1,10 @@
 import Label, { labelColors } from "../Label/Label";
 import SlideText from "../SlideText/SlideText";
 import RevealImage, { RevealColorColors } from "../RevealImage/RevealImage";
-import { selectedWorksType } from "@/components/Home/Works/WorkConstants";
+import { AllWorksType } from "@/components/Portfolio/AllWorks/AllWorksConstants";
+import Link from "next/link";
 
-type WorksGridProps = { worksArray: selectedWorksType[] };
+type WorksGridProps = { worksArray: AllWorksType[] };
 
 export default function WorksGrid({ worksArray }: WorksGridProps) {
   return (
@@ -20,11 +21,13 @@ export default function WorksGrid({ worksArray }: WorksGridProps) {
               label={work.title}
               style="text-whiteShade text-[20px] font-medium"
             />
-            <Label
-              title="View"
-              labelBg={labelColors.transparant}
-              styles="hover:bg-whiteShade duration-500 hover:text-greyBg"
-            />
+            <Link href={`/Projects/${work.alt}`}>
+              <Label
+                title="View"
+                labelBg={labelColors.transparant}
+                styles="hover:bg-whiteShade duration-500 hover:text-greyBg"
+              />
+            </Link>
           </div>
         </div>
       ))}

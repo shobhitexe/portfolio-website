@@ -1,8 +1,12 @@
-import { selectedWorksType } from "@/components/Home/Works/WorkConstants";
+export type AllWorksType = {
+  title: string;
+  image: string;
+  alt: string;
+};
 
 const WorksBaseUrl: string = "/images/showcase";
 
-export const AllWorksData: selectedWorksType[] = [
+export const AllWorksData: AllWorksType[] = [
   {
     title: "SLEEK CUSTOM",
     image: `${WorksBaseUrl}/sleekcustom.png`,
