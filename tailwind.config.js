@@ -15,7 +15,9 @@ module.exports = {
         lg: "1200px",
         xl: "1700px",
       },
-      backgroundImage: {},
+      backgroundImage: {
+        sleekcustom: "url('/images/showcase/sleekcustom.png')",
+      },
       fontFamily: {
         satoshi: "satoshi",
         general: "general",
