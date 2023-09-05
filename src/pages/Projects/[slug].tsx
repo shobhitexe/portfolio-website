@@ -1,4 +1,4 @@
-import { ProjectHero } from "@/components";
+import { ProjectHero, ProjectInfo } from "@/components";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { projectType } from "../api/projects/projectsType";
@@ -43,6 +43,7 @@ export default function Project() {
   return (
     <div>
       <ProjectHero heroData={projectData.head} />
+      <ProjectInfo desc={projectData.desc} links={projectData.links} />
     </div>
   );
 }

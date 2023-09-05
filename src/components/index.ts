@@ -13,6 +13,7 @@ import ContactSection from "./ContactSection/ContactSection";
 import ContactLeft from "./Contact/ContactLeft";
 import ContactRight from "./Contact/ContactRight";
 import ProjectHero from "./Projects/ProjectHero";
+import ProjectInfo from "./Projects/ProjectInfo";
 
 export {
   Hero,
@@ -30,4 +31,5 @@ export {
   ContactLeft,
   ContactRight,
   ProjectHero,
+  ProjectInfo,
 };
