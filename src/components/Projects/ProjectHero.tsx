@@ -9,8 +9,6 @@ type ProjectHeroProps = {
 };
 
 export default function ProjectHero({ heroData }: ProjectHeroProps) {
-  console.log(heroData.headImage);
-
   return (
     <div className={`h-screen bg-${heroData.headImage} bg-cover`}>
       <div className="w-full h-full bg-black bg-opacity-50 backdrop-blur-[2px] flex flex-col justify-between">

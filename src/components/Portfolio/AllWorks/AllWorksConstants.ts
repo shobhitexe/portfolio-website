@@ -27,9 +27,4 @@ export const AllWorksData: AllWorksType[] = [
     image: `${WorksBaseUrl}/master.png`,
     alt: "master",
   },
-  {
-    title: "MetaDecrypt",
-    image: `${WorksBaseUrl}/metadecrypt.png`,
-    alt: "metadecrypt",
-  },
 ];

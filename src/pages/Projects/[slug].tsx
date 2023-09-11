@@ -1,4 +1,9 @@
-import { ProjectHero, ProjectInfo } from "@/components";
+import {
+  ProjectHero,
+  ProjectImages,
+  ProjectInfo,
+  ProjectSlider,
+} from "@/components";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { projectType } from "../api/projects/projectsType";
@@ -28,7 +33,6 @@ export default function Project() {
         }
         const data = await response.json();
 
-        // console.log(data);
         setprojectData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -44,6 +48,8 @@ export default function Project() {
     <div>
       <ProjectHero heroData={projectData.head} />
       <ProjectInfo desc={projectData.desc} links={projectData.links} />
+      <ProjectImages images={projectData.images} />
+      <ProjectSlider currPage={router.query.slug} />
     </div>
   );
 }

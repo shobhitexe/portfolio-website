@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { projectType } from "./projectsType";
 
+const sleekcustomImageBaseUrl: string = "/images/Projects/sleekcustom";
+
 const sleekcustomData: projectType = {
   head: {
     title: "Sleek Custom",
@@ -16,7 +18,14 @@ const sleekcustomData: projectType = {
       "In this project, I skillfully designed a responsive website using ReactJS and TypeScript. The website boasts seamless adaptability to diverse devices and user-friendly navigation. Incorporating interactive elements, the final product received high praise from the client, affirming the project's success in effectively showcasing their services.",
   },
   links: { liveSite: "https://www.sleekcustoms.com/" },
-  images: [],
+  images: [
+    `${sleekcustomImageBaseUrl}/sleekcustom1.png`,
+    `${sleekcustomImageBaseUrl}/sleekcustom2.png`,
+    `${sleekcustomImageBaseUrl}/sleekcustom3.png`,
+    `${sleekcustomImageBaseUrl}/sleekcustom4.png`,
+    `${sleekcustomImageBaseUrl}/sleekcustom5.png`,
+    `${sleekcustomImageBaseUrl}/sleekcustom6.png`,
+  ],
 };
 
 export default async function handler(

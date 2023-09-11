@@ -14,6 +14,8 @@ import ContactLeft from "./Contact/ContactLeft";
 import ContactRight from "./Contact/ContactRight";
 import ProjectHero from "./Projects/ProjectHero";
 import ProjectInfo from "./Projects/ProjectInfo";
+import ProjectImages from "./Projects/ProjectImages";
+import ProjectSlider from "./Projects/ProjectSlider";
 
 export {
   Hero,
@@ -32,4 +34,6 @@ export {
   ContactRight,
   ProjectHero,
   ProjectInfo,
+  ProjectImages,
+  ProjectSlider,
 };
