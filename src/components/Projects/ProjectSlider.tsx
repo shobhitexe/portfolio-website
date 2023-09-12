@@ -27,7 +27,7 @@ export default function ProjectSlider({
     <div className="mt-20 flex flex-col w-[95%] mx-auto">
       <div className="flex justify-between items-start">
         <Label title="Other works" labelBg={labelColors.green} />
-        <h1 className="font-satoshi text-[40px] text-whiteShade">
+        <h1 className="font-satoshi md:text-[40px] sm:text-[30px] text-[18px] text-whiteShade">
           CHECK OUT SOME MORE
         </h1>
       </div>
