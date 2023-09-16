@@ -1,9 +1,5 @@
-type UpRevealTextProps = { label: string; styles?: string; YShift?: number };
+type UpRevealTextProps = { label: string; styles?: string };
 
-export default function UpRevealText({
-  label,
-  styles,
-  YShift = 150,
-}: UpRevealTextProps) {
+export default function UpRevealText({ label, styles }: UpRevealTextProps) {
   return <div className={`font-general ${styles}`}>{label}</div>;
 }
