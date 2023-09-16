@@ -11,15 +11,10 @@ import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
 import { MutableRefObject, useEffect, useRef } from "react";
 
-import { imageRevealAnimation } from "./AboutSectionAnimations";
 import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
 
 export default function AboutSection() {
   const imageRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-  useEffect(() => {
-    imageRevealAnimation(imageRef.current!);
-  }, []);
 
   return (
     <div className="text-white mt-28 w-[90%] mx-auto flex md:flex-row flex-col items-stretch md:gap-40 gap-10 justify-center">

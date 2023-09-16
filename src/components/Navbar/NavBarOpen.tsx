@@ -1,45 +1,22 @@
 import { navLinks } from "./navbarConstants";
 import DiagonalArrow from "../icons/DiagonalArrow";
-import { useRef, useEffect, MutableRefObject } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/rootReducer";
 import Link from "next/link";
-import {
-  navBarSliderOpenAnimation,
-  navLinksEnterAnimation,
-  navLinksExitAnimation,
-} from "./NavbarAnimations";
 import { useDispatch } from "react-redux";
 import { setIsNavOpen } from "@/store/slices/navbarOpen";
 
 export default function NavBarOpen() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
 
-  const titleRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-  const navBarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-  useEffect(() => {
-    navBarSliderOpenAnimation(navBarRef.current!, titleRef.current!);
-  }, [isNavOpen]);
-
   const dispatch = useDispatch();
 
   return (
     <div className="fixed w-full left-0 sm:h-1/2 h-fit top-3 mx-auto">
-      <div
-        ref={navBarRef}
-        className="bg-black w-[98%] h-full rounded-2xl mx-auto"
-      >
-        <div
-          ref={titleRef}
-          className="text-whiteShade font-satoshi h-full sm:grid max-sm:pt-20 grid-cols-5 w-full"
-        >
+      <div className="bg-black w-[98%] h-full rounded-2xl mx-auto">
+        <div className="text-whiteShade font-satoshi h-full sm:grid max-sm:pt-20 grid-cols-5 w-full">
           {navLinks.map((nav, idx) => (
             <div
-              onMouseEnter={() =>
-                navLinksEnterAnimation(titleRef.current!, idx)
-              }
-              onMouseLeave={() => navLinksExitAnimation(titleRef.current!, idx)}
               onClick={() => dispatch(setIsNavOpen())}
               className={`sm:text-[30px] text-[25px] cursor-pointer flex flex-row w-full justify-center sm:py-10 py-9 ${
                 idx + 1 === navLinks.length ? "" : "border-r"

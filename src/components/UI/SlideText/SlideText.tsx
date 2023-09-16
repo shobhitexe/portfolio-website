@@ -1,6 +1,4 @@
-import { useRef, useEffect, MutableRefObject } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef, MutableRefObject } from "react";
 
 export enum SlideTextColors {
   white = "text-whiteShade",
@@ -29,31 +27,8 @@ export default function SlideText({
 }: SlideTextProps) {
   const textRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    Array.from(textRef.current?.children!).map((text, idx) => {
-      gsap.fromTo(
-        text,
-        { opacity: 0, translateX: -idx * 10 },
-        {
-          opacity: 1,
-          translateX: 0,
-          duration: idx * 0.04,
-          delay: 0.1,
-          scrollTrigger: {
-            trigger: text,
-            start: start,
-            end: end,
-            scrub: 3,
-          },
-        }
-      );
-    });
-  }, []);
-
   return (
-    <div ref={textRef} className={`font-satoshi flex relative ${style}`}>
+    <div className={`font-satoshi flex relative ${style}`}>
       {Array.from(label).map((text, idx) => {
         return (
           <div

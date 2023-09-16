@@ -1,11 +1,5 @@
 import { RootState } from "@/store/rootReducer";
 import { useSelector } from "react-redux";
-import { MutableRefObject, useEffect, useRef } from "react";
-import {
-  navBarAnimation,
-  navHeadingOpenAnimation,
-  navOpenBtnAnimation,
-} from "./NavbarAnimations";
 import { buttonColors } from "../UI/Button/Button";
 import Button from "../UI/Button/Button";
 import NavBarOpen from "./NavBarOpen";
@@ -14,30 +8,25 @@ import { setIsNavOpen } from "@/store/slices/navbarOpen";
 import NavBarHeading from "../UI/Heading/NavBarHeading";
 import Arrow from "../icons/Arrow";
 import Fingers from "../icons/Fingers";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
 
-  const navBtnRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-  const navbarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-  const navHeadingRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    navBarAnimation(navbarRef.current!);
-  }, []);
-
-  useEffect(() => {
-    navHeadingOpenAnimation(navHeadingRef.current!, isNavOpen);
-  }, [isNavOpen]);
-
   return (
-    <div
-      ref={navbarRef}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: 0.1,
+        duration: 2,
+        type: "spring",
+      }}
       className="fixed top-0 left-0 ss:px-10 px-5 py-5 flex justify-between items-center w-full z-50 bg-greyBg"
     >
-      <div ref={navHeadingRef} className={`z-50 relative`}>
+      <div className={`z-50 relative`}>
         <NavBarHeading />
         <div className="absolute top-0 translate-y-5 opacity-0 hover:-rotate-6 duration-500">
           <NavBarHeading />
@@ -55,9 +44,7 @@ export default function Navbar() {
         <div
           onClick={() => {
             dispatch(setIsNavOpen());
-            navOpenBtnAnimation(navBtnRef.current!, isNavOpen);
           }}
-          ref={navBtnRef}
           className={`bg-whiteShade w-8 h-8 justify-center ${
             isNavOpen && "z-[999]"
           } items-center cursor-pointer rounded-full flex flex-col hover:scale-125 duration-1000`}
@@ -71,6 +58,6 @@ export default function Navbar() {
         </div>
       </div>
       {isNavOpen && <NavBarOpen />}
-    </div>
+    </motion.div>
   );
 }

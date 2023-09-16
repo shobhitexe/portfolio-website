@@ -2,7 +2,6 @@ import Button from "../Button/Button";
 import { buttonColors } from "../Button/Button";
 import { useRef, MutableRefObject, useEffect } from "react";
 import HeaderHeading from "./HeaderHeading";
-import { pageHeadRevealAnimation } from "./pageHeadAnimations";
 import Arrow from "@/components/icons/Arrow";
 import Fingers from "@/components/icons/Fingers";
 import Eye from "@/components/icons/Eye";
@@ -28,15 +27,11 @@ export default function PageHeader({
   buttonTwoText,
   startHighlight,
   endHighlight,
-  indexHero,
+
   redirectOne,
   redirectTwo,
 }: PageHeaderProps) {
   const heroParaRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-  useEffect(() => {
-    pageHeadRevealAnimation(heroParaRef.current!);
-  }, []);
 
   return (
     <div>
@@ -44,7 +39,6 @@ export default function PageHeader({
         HeroHeadingText={headText}
         startHighlight={startHighlight}
         endHighlight={endHighlight}
-        indexHero={indexHero}
       />
       <div ref={heroParaRef} className="flex flex-col gap-5 w-full">
         <div className="md:w-[40%] sm:w-[50%] w-full mt-10 font-general text-whiteShade md:text-[20px] sm:text-[18px] text-[15px]">

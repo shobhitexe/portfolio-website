@@ -1,16 +1,11 @@
 import Image from "next/image";
-import { useRef, useEffect, MutableRefObject, useState } from "react";
+import { useEffect, MutableRefObject, useState } from "react";
 import { showCaseImages, showCaseImagesType } from "./showCaseConstants";
-import { scrollShowcaseAnimation } from "./showCaseAnimations";
 
 export default function Showcase() {
-  const gridRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
   const [gridImages, setGridImages] = useState<showCaseImagesType[][]>([]);
 
   useEffect(() => {
-    scrollShowcaseAnimation(gridRef.current!);
-
     const imagesRecurr = [];
 
     for (let i = 0; i < 8; i++) {
@@ -28,7 +23,7 @@ export default function Showcase() {
 
   return (
     <div className="overflow-hidden bg-whiteShade bg-opacity-20 mt-40 sm:h-screen h-[50vh]">
-      <div ref={gridRef} className="flex sm:gap-5 gap-1">
+      <div className="flex sm:gap-5 gap-1">
         {[0, 1, 2].map((num) => (
           <div
             key={num}

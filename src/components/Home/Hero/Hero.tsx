@@ -2,20 +2,22 @@ import Button from "../../UI/Button/Button";
 import { buttonColors } from "../../UI/Button/Button";
 import Rocket from "../../icons/Rocket";
 import RocketFill from "../../icons/RocketFill";
-import { useRef, useEffect, MutableRefObject } from "react";
-import { heroRevealAnimation } from "./HeroAnimations";
 import PageHeader from "../../UI/pageHeading/PageHeader";
+import { motion } from "framer-motion";
 
 export default function Hero() {
-  const buttonRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-  useEffect(() => {
-    heroRevealAnimation(buttonRef.current!);
-  }, []);
-
   return (
     <div className={"flex relative flex-col mt-[170px] w-[95%] mx-auto"}>
-      <div ref={buttonRef} className={`flex`}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          delay: 0.1,
+          duration: 2,
+          type: "spring",
+        }}
+        className={`flex`}
+      >
         <Button
           label="Available for work"
           buttonBg={buttonColors.gray}
@@ -25,7 +27,7 @@ export default function Hero() {
           SecondSvg={RocketFill}
           redirectTo="/"
         />
-      </div>
+      </motion.div>
       <PageHeader
         headText="FULL STACK -  JAVASCRIPT DEVELOPER"
         headDesc="Crafting user-friendly web applications and automated bots and
