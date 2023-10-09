@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 
 export enum buttonColors {
   white = "bg-whiteShade",
@@ -25,27 +26,46 @@ export default function Button({
   SecondSvg,
   redirectTo,
 }: ButtonProps) {
-  function handleButtonAnimation() {}
-
-  function handleButtonLeaveAnimation() {}
+  const [btnTransform, setBtnTransform] = useState<{
+    svg1: { transform: number; opacity: number };
+    svg2: { transform: number; opacity: number };
+  }>({
+    svg1: {
+      transform: 0,
+      opacity: 1,
+    },
+    svg2: {
+      transform: 20,
+      opacity: 0,
+    },
+  });
 
   return (
     <motion.div
       initial={{ rotate: 0 }}
       whileHover={{ rotate: -5 }}
       transition={{
-        delay: 0.1,
         duration: 0.1,
         type: "spring",
-        damping: 7,
+        damping: 6,
       }}
       viewport={{ once: true, amount: 0.5 }}
+      onMouseOver={() =>
+        setBtnTransform({
+          svg1: { transform: -20, opacity: 0 },
+          svg2: { transform: 0, opacity: 1 },
+        })
+      }
+      onMouseLeave={() =>
+        setBtnTransform({
+          svg1: { transform: 0, opacity: 1 },
+          svg2: { transform: 10, opacity: 0 },
+        })
+      }
     >
       <Link
         href={redirectTo}
         target={redirectTo === "/Resume" ? "_blank" : ""}
-        onMouseEnter={handleButtonAnimation}
-        onMouseLeave={handleButtonLeaveAnimation}
         className={`flex items-center px-3 gap-2 py-1 cursor-pointer sm:text-[15px] text-[12px] rounded-3xl font-general w-fit ${
           border ? "border border-white" : ""
         } ${buttonBg}`}
@@ -61,18 +81,39 @@ export default function Button({
           className={`flex flex-col w-6 h-6 ${circleBg} rounded-full relative
         `}
         >
-          <FirstSvg
-            width={24}
-            height={24}
-            color={circleBg === buttonColors.gray ? "white" : "black"}
-            className="p-1 absolute rounded-full"
-          />
-          <SecondSvg
-            width={24}
-            height={24}
-            color={circleBg === buttonColors.gray ? "white" : "black"}
-            className="p-1 rounded-full absolute translate-y-2 opacity-0"
-          />
+          <motion.div
+            initial={{ translateY: 0, opacity: 1 }}
+            animate={{
+              translateY: btnTransform.svg1.transform,
+              opacity: btnTransform.svg1.opacity,
+            }}
+            transition={{
+              duration: 0.1,
+              type: "spring",
+              damping: 6,
+            }}
+          >
+            <FirstSvg
+              width={24}
+              height={24}
+              color={circleBg === buttonColors.gray ? "white" : "black"}
+              className="p-1 absolute rounded-full"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ translateY: 0, opacity: 0 }}
+            animate={{
+              translateY: btnTransform.svg2.transform,
+              opacity: btnTransform.svg2.opacity,
+            }}
+          >
+            <SecondSvg
+              width={24}
+              height={24}
+              color={circleBg === buttonColors.gray ? "white" : "black"}
+              className="p-1 rounded-full absolute"
+            />
+          </motion.div>
         </div>
       </Link>
     </motion.div>
