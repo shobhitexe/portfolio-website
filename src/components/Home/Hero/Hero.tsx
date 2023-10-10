@@ -29,7 +29,7 @@ export default function Hero() {
         />
       </motion.div>
       <PageHeader
-        headText="FULL STACK -  JAVASCRIPT DEVELOPER"
+        headText="FULL STACK JAVASCRIPT DEVELOPER"
         headDesc="Crafting user-friendly web applications and automated bots and
           dabbling in the world of Web3. Always pushing code boundaries and
           finding creative solutions."

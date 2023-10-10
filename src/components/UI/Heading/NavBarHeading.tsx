@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 export default function NavBarHeading() {
   const route = useSelector((state: RootState) => state.currRoute.route);
-
   const router = useRouter();
 
   return (
