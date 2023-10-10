@@ -28,9 +28,6 @@ export default function Navbar() {
     >
       <div className={`z-50 relative`}>
         <NavBarHeading />
-        <div className="absolute top-0 translate-y-5 opacity-0 hover:-rotate-6 duration-500">
-          <NavBarHeading />
-        </div>
       </div>
       <div className="flex items-center sm:gap-5 gap-2">
         <Button
