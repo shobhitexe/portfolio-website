@@ -42,14 +42,14 @@ export default function Button({
 
   return (
     <motion.div
-      initial={{ rotate: 0 }}
+      initial={{ rotate: 0, opacity: 0 }}
       whileHover={{ rotate: -5 }}
       transition={{
         duration: 0.1,
         type: "spring",
         damping: 6,
       }}
-      viewport={{ once: true, amount: 0.5 }}
+      whileInView={{ opacity: 1 }}
       onMouseOver={() =>
         setBtnTransform({
           svg1: { transform: -20, opacity: 0 },
