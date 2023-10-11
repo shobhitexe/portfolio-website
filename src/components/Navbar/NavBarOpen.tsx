@@ -1,18 +1,27 @@
 import { navLinks } from "./navbarConstants";
 import DiagonalArrow from "../icons/DiagonalArrow";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store/rootReducer";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { setIsNavOpen } from "@/store/slices/navbarOpen";
+import { motion } from "framer-motion";
 
 export default function NavBarOpen() {
-  const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
-
   const dispatch = useDispatch();
 
   return (
-    <div className="fixed w-full left-0 sm:h-1/2 h-fit top-3 mx-auto">
+    <motion.div
+      initial={{ translateY: "-120%", opacity: 0 }}
+      animate={{ translateY: 0, opacity: 1 }}
+      exit={{ translateY: "-120%", opacity: 0 }}
+      transition={{
+        delay: 0.1,
+        duration: 0.5,
+        stiffness: 70,
+        damping: 13,
+        type: "spring",
+      }}
+      className="fixed w-full left-0 sm:h-1/2 h-fit top-3 mx-auto"
+    >
       <div className="bg-black w-[98%] h-full rounded-2xl mx-auto">
         <div className="text-whiteShade font-satoshi h-full sm:grid max-sm:pt-20 grid-cols-5 w-full">
           {navLinks.map((nav, idx) => (
@@ -26,21 +35,32 @@ export default function NavBarOpen() {
               <Link
                 href={nav.link}
                 target={nav.link === "Resume" ? "_blank" : ""}
-                className="flex flex-row items-center lg:gap-20 md:gap-14 gap-5 relative select-none"
+                className="flex flex-row items-center lg:gap-20 md:gap-14 gap-5 relative select-none hover:-translate-y-5 duration-500 hover:text-green-500"
               >
-                <h1>{nav.title}</h1>
-                <h1 className="text-green-500 opacity-0 translate-y-5 absolute">
+                <motion.h1
+                  initial={{ opacity: 0, translateY: 50 }}
+                  animate={{
+                    opacity: 1,
+                    translateY: 0,
+                  }}
+                  exit={{ opacity: 0, translateY: 50 }}
+                  transition={{
+                    delay: 0.1 * idx + 0.2,
+                    duration: 0.5,
+                    stiffness: 60,
+                    damping: 6,
+                    type: "spring",
+                  }}
+                  className=""
+                >
                   {nav.title}
-                </h1>
+                </motion.h1>
                 <DiagonalArrow />
-                <div className="absolute right-0 translate-x-[-15px] translate-y-[15px] opacity-0">
-                  <DiagonalArrow />
-                </div>
               </Link>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

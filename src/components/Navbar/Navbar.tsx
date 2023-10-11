@@ -8,7 +8,7 @@ import { setIsNavOpen } from "@/store/slices/navbarOpen";
 import NavBarHeading from "../UI/Heading/NavBarHeading";
 import Arrow from "../icons/Arrow";
 import Fingers from "../icons/Fingers";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
   const isNavOpen = useSelector((state: RootState) => state.isNavOpen.isOpen);
@@ -54,7 +54,7 @@ export default function Navbar() {
           ></div>
         </div>
       </div>
-      {isNavOpen && <NavBarOpen />}
+      <AnimatePresence>{isNavOpen && <NavBarOpen />}</AnimatePresence>
     </motion.div>
   );
 }
