@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useRef, MutableRefObject } from "react";
 
 export enum SlideTextColors {
@@ -22,8 +23,6 @@ export default function SlideText({
   highlightedText,
   colorOne,
   colorTwo,
-  start = "20% bottom",
-  end = "20% bottom",
 }: SlideTextProps) {
   const textRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
@@ -31,13 +30,22 @@ export default function SlideText({
     <div className={`font-satoshi flex relative ${style}`}>
       {Array.from(label).map((text, idx) => {
         return (
-          <div
+          <motion.div
+            layout
+            initial={{ translateX: idx * 2, opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            transition={{
+              delay: 0.1,
+              duration: 0.2,
+              stiffness: 70,
+              type: "spring",
+            }}
             key={idx}
             className={`${idx < highlightedText! ? colorOne : colorTwo}`}
           >
             {text}
             {text === " " && <div>&nbsp;</div>}
-          </div>
+          </motion.div>
         );
       })}
     </div>

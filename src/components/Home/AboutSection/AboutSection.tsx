@@ -9,13 +9,10 @@ import Button from "../../UI/Button/Button";
 import { buttonColors } from "../../UI/Button/Button";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
-import { MutableRefObject, useEffect, useRef } from "react";
-
 import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
-  const imageRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
   return (
     <div className="text-white mt-28 w-[90%] mx-auto flex md:flex-row flex-col items-stretch md:gap-40 gap-10 justify-center">
       <div className="flex flex-col items-stretch justify-between ">
@@ -36,7 +33,18 @@ export default function AboutSection() {
         </div>
       </div>
       <div className="flex sm:flex-row flex-col justify-center gap-10">
-        <div ref={imageRef} className="rounded-full">
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.2,
+            stiffness: 70,
+            damping: 13,
+            type: "spring",
+          }}
+          className="rounded-full"
+        >
           <Image
             src="/images/about/shobhitexe.jpeg"
             alt="pfp"
@@ -44,11 +52,15 @@ export default function AboutSection() {
             height={150}
             className="rounded-full object-contain"
           />
-        </div>
+        </motion.div>
 
         <div className="flex flex-col w-fit gap-5">
-          <UpRevealText label={headingParagraph1} styles="font-medium" />
-          <UpRevealText label={headingParagraph2} />
+          <UpRevealText
+            label={headingParagraph1}
+            delay={0.1}
+            styles="font-medium"
+          />
+          <UpRevealText label={headingParagraph2} delay={0.2} />
           <Button
             label="Read More"
             buttonBg={buttonColors.gray}

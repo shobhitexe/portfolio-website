@@ -4,8 +4,8 @@ import Label, { labelColors } from "../../UI/Label/Label";
 import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
-
 import WorksGrid from "@/components/UI/WorksGrid/WorksGrid";
+import { motion } from "framer-motion";
 
 export default function Work() {
   return (
@@ -21,11 +21,21 @@ export default function Work() {
               colorTwo={SlideTextColors.gray}
               highlightedText={5}
             />
-            <p className="font-general sm:text-[19px] text-[15px] text-whiteShade">
+            <motion.p
+              initial={{ translateY: 20, opacity: 0 }}
+              whileInView={{ translateY: 0, opacity: 1 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.3,
+                stiffness: 60,
+                type: "spring",
+              }}
+              className="font-general sm:text-[19px] text-[15px] text-whiteShade"
+            >
               My projects showcases the exceptional work that I have delivered.
               Have a look into my portfolio, highlighting the diverse range of
               web design projects for various industries.
-            </p>
+            </motion.p>
           </div>
         </div>
         <WorksGrid

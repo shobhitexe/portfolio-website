@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export enum RevealColorColors {
@@ -19,7 +20,18 @@ export default function RevealImage({
 }: RevealImageProps) {
   return (
     <div className="overflow-hidden rounded-2xl relative">
-      <div className={`absolute w-full h-full ${cover}`}></div>
+      <motion.div
+        initial={{ translateX: 0 }}
+        whileInView={{ translateX: "100%" }}
+        transition={{
+          delay: 0.4,
+          duration: 0.5,
+          stiffness: 50,
+          damping: 15,
+          type: "spring",
+        }}
+        className={`absolute w-full h-full ${cover}`}
+      ></motion.div>
       <Image
         src={image}
         alt={alt}
