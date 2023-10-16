@@ -15,7 +15,7 @@
 }
 
 
-html{
+html,body{
     overflow-x: hidden;
     background-color: #1d1f21;
     scroll-behavior: smooth;
