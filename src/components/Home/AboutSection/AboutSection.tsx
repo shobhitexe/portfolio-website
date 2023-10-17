@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <div className="text-white mt-28 w-[90%] mx-auto flex md:flex-row flex-col items-stretch md:gap-40 gap-10 justify-center">
+    <div className="text-white mt-28 w-[90%] mx-auto flex md:flex-row flex-col items-stretch md:gap-40 gap-10 justify-center relative pb-16">
       <div className="flex flex-col items-stretch justify-between ">
         <Label title="About Me" labelBg={labelColors.green} />
         <div className="flex flex-col gap-5">
@@ -61,15 +61,17 @@ export default function AboutSection() {
             styles="font-medium"
           />
           <UpRevealText label={headingParagraph2} delay={0.2} />
-          <Button
-            label="Read More"
-            buttonBg={buttonColors.gray}
-            circleBg={buttonColors.white}
-            FirstSvg={Arrow}
-            border={true}
-            SecondSvg={Eye}
-            redirectTo="/About"
-          />
+          <div className="absolute bottom-0">
+            <Button
+              label="Read More"
+              buttonBg={buttonColors.gray}
+              circleBg={buttonColors.white}
+              FirstSvg={Arrow}
+              border={true}
+              SecondSvg={Eye}
+              redirectTo="/About"
+            />
+          </div>
         </div>
       </div>
     </div>
