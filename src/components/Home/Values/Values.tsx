@@ -26,6 +26,7 @@ export default function Values() {
             collaborate with my clients to achieve common goals and realize
             desired outcomes"
             styles="text-whiteShade font-general md:text-[15px] text-[14px]"
+            delay={0.2}
           />
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function ExpertiseLeft() {
         businesses alike. My goal is to assist businesses in building a robust
         online presence and effectively connecting with their target audience."
         styles="font-medium text-[17px]"
-        YShift={100}
+        delay={0.1}
       />
       <div className="flex gap-3 items-center">
         <Button

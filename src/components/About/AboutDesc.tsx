@@ -24,8 +24,12 @@ export default function AboutDesc() {
               work with utmost professionalism, yet I firmly believe that work
               should be enjoyable. That's why I infuse a touch of humor into
               every project I undertake."
+            delay={0.1}
           />
-          <UpRevealText label="I hold the belief that humor and creativity are interconnected, and this mindset propels me to explore boundaries and deliver genuinely outstanding designs. Furthermore, I maintain the perspective that each business is distinct, and as a result, no two websites should bear too much resemblance to one another." />
+          <UpRevealText
+            label="I hold the belief that humor and creativity are interconnected, and this mindset propels me to explore boundaries and deliver genuinely outstanding designs. Furthermore, I maintain the perspective that each business is distinct, and as a result, no two websites should bear too much resemblance to one another."
+            delay={0.2}
+          />
         </div>
         <div className="flex items-center gap-5">
           <Button
