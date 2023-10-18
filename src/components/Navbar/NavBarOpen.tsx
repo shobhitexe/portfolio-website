@@ -20,7 +20,7 @@ export default function NavBarOpen() {
         damping: 13,
         type: "spring",
       }}
-      className="fixed w-full left-0 sm:h-1/2 h-fit top-3 mx-auto"
+      className="bg-black fixed w-full left-0 sm:h-1/2  top-3 mx-auto"
     >
       <div className="bg-black w-[98%] h-full rounded-2xl mx-auto">
         <div className="text-whiteShade font-satoshi h-full sm:grid max-sm:pt-20 grid-cols-5 w-full">
@@ -28,7 +28,7 @@ export default function NavBarOpen() {
             <div
               onClick={() => dispatch(setIsNavOpen())}
               className={`sm:text-[30px] text-[25px] cursor-pointer flex flex-row w-full justify-center sm:py-10 py-9 ${
-                idx + 1 === navLinks.length ? "" : "border-r"
+                idx + 1 === navLinks.length ? "" : "sm:border-r"
               } items-end max-sm:border-t border-whiteShade border-opacity-30`}
               key={nav.title}
             >
