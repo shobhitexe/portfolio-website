@@ -28,7 +28,7 @@ export default function Showcase() {
         {[0, 1, 2].map((num, indx) => (
           <motion.div
             key={num}
-            className={`flex flex-col sm:gap-4 ss:gap-16 xs:gap-16 gap-10`}
+            className={`flex flex-col sm:gap-2 ss:gap-3 gap-1`}
           >
             {gridImages[num]?.map((img, idx) => (
               <motion.div
@@ -51,7 +51,7 @@ export default function Showcase() {
                     : num === 0
                     ? "max-sm:translate-x-[-50%]"
                     : ""
-                } max-sm:scale-150`}
+                } max-sm:scale-200`}
               >
                 <Image
                   src={img.image}

@@ -10,6 +10,7 @@ type RevealImageProps = {
   alt: string;
   style?: string;
   cover: RevealColorColors;
+  delay?: number;
 };
 
 export default function RevealImage({
@@ -17,6 +18,7 @@ export default function RevealImage({
   alt,
   style,
   cover,
+  delay = 0.4,
 }: RevealImageProps) {
   return (
     <div className="overflow-hidden rounded-2xl relative">
@@ -24,7 +26,7 @@ export default function RevealImage({
         initial={{ translateX: 0 }}
         whileInView={{ translateX: "100%" }}
         transition={{
-          delay: 0.4,
+          delay: delay,
           duration: 0.5,
           stiffness: 50,
           damping: 15,

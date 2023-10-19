@@ -9,7 +9,7 @@ const blockestateData: projectType = {
     stack: "ReactJs/Solidity",
     type: "College Major Project",
     time: "Feb 2023 - Apr 2023",
-    headImage: "blockestate",
+    headImage: "bg-blockestate",
   },
   desc: {
     descHead:

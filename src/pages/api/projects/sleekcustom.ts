@@ -9,7 +9,7 @@ const sleekcustomData: projectType = {
     stack: "ReactJs",
     type: "Freelancing work",
     time: "July 23 - July 23",
-    headImage: "sleekcustom",
+    headImage: "bg-sleekcustom",
   },
   desc: {
     descHead:

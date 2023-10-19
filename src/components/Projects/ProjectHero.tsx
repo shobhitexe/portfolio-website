@@ -10,8 +10,8 @@ type ProjectHeroProps = {
 
 export default function ProjectHero({ heroData }: ProjectHeroProps) {
   return (
-    <div className={`h-screen bg-${heroData.headImage} bg-cover`}>
-      <div className="w-full h-full bg-black bg-opacity-50 backdrop-blur-[2px] flex flex-col justify-between">
+    <div className={`h-screen ${heroData.headImage} bg-cover bg-center`}>
+      <div className="w-full h-full bg-black bg-opacity-80 backdrop-blur-[10px] flex flex-col justify-between">
         <h1 className="text-whiteShade md:text-[80px] ss:text-[40px] text-[30px] ml-5 mt-[100px] font-satoshi font-medium">
           {heroData.title}
         </h1>

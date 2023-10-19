@@ -17,6 +17,9 @@ module.exports = {
       },
       backgroundImage: {
         sleekcustom: "url('/images/showcase/sleekcustom.png')",
+        blockestate: "url('/images/showcase/blockestate.png')",
+        master: "url('/images/showcase/master.png')",
+        vpnwizard: "url('/images/showcase/vpnwizard.png')",
       },
       fontFamily: {
         satoshi: "satoshi",

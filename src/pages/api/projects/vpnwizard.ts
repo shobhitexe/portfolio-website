@@ -9,7 +9,7 @@ const vpnwizardData: projectType = {
     stack: "HTML/CSS/JS",
     type: "Freelancing work",
     time: "Mar 2023 - Mar 2023",
-    headImage: "vpnwizard",
+    headImage: "bg-vpnwizard",
   },
   desc: {
     descHead:
