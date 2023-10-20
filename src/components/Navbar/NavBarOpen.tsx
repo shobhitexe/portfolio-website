@@ -20,7 +20,7 @@ export default function NavBarOpen() {
         damping: 13,
         type: "spring",
       }}
-      className="bg-black fixed w-full left-0 sm:h-1/2  top-3 mx-auto"
+      className="bg-black fixed rounded-2xl w-full left-0 sm:h-1/2  top-3 mx-auto"
     >
       <div className="bg-black w-[98%] h-full rounded-2xl mx-auto">
         <div className="text-whiteShade font-satoshi h-full sm:grid max-sm:pt-20 grid-cols-5 w-full">
