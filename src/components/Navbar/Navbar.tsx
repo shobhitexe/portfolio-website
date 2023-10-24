@@ -26,7 +26,7 @@ export default function Navbar() {
       }}
       className="fixed top-0 left-0 ss:px-10 px-5 py-5 flex justify-between items-center w-full z-50 bg-greyBg"
     >
-      <div className={`z-50 relative`}>
+      <div className={`z-50 relative hover:-rotate-6 duration-500`}>
         <NavBarHeading />
       </div>
       <div className="flex items-center sm:gap-5 gap-2">
