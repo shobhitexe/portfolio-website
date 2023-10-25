@@ -7,7 +7,7 @@ const masterData: projectType = {
   head: {
     title: "Master",
     stack: "ReactJs",
-    type: "Freelancing work",
+    type: "Personal Project",
     time: "June 2023 - June 2023",
     headImage: "bg-master",
   },
