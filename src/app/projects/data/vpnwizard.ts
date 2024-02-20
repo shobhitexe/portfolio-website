@@ -1,4 +1,4 @@
-const vpnwizardBaseUrl: string = "/images/Projects/vpnwizard";
+export const vpnwizardBaseUrl: string = "/images/Projects/vpnwizard";
 
 export default {
   head: {

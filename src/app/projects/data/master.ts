@@ -1,4 +1,4 @@
-const masterBaseUrl: string = "/images/Projects/master";
+export const masterBaseUrl: string = "/images/Projects/master";
 
 export default {
   head: {

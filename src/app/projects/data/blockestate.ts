@@ -1,4 +1,4 @@
-const blockestateBaseUrl: string = "/images/Projects/blockestate";
+export const blockestateBaseUrl: string = "/images/Projects/blockestate";
 
 export default {
   head: {

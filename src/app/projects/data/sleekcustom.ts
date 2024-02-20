@@ -1,4 +1,4 @@
-const sleekcustomImageBaseUrl: string = "/images/Projects/sleekcustom";
+export const sleekcustomImageBaseUrl: string = "/images/Projects/sleekcustom";
 
 export default {
   head: {
