@@ -1,9 +1,6 @@
-import { NextResponse } from "next/server";
-import { projectType } from "../projectsType";
-
 const masterBaseUrl: string = "/images/Projects/master";
 
-const masterData: projectType = {
+export default {
   head: {
     title: "Master",
     stack: "ReactJs",
@@ -25,7 +22,3 @@ const masterData: projectType = {
     `${masterBaseUrl}/master4.png`,
   ],
 };
-
-export async function GET() {
-  return NextResponse.json(masterData, { status: 200 });
-}

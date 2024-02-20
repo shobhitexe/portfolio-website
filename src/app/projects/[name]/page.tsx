@@ -1,4 +1,3 @@
-import { projectType } from "@/app/api/projects/projectsType";
 import {
   ProjectHero,
   ProjectImages,
@@ -6,28 +5,15 @@ import {
   ProjectSlider,
 } from "@/components";
 
+import { ProjectsData } from "../data/ProjectsData";
 import { redirect } from "next/navigation";
 
-async function fetchProjectData(name: string) {
-  try {
-    const response = await fetch(`http://localhost:3000/api/projects/${name}`, {
-      method: "GET",
-    });
-
-    if (response.status !== 200) {
-      throw new Error("Failed to fetch");
-    }
-    const data = await response.json();
-
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return redirect("/404");
-  }
-}
-
 export default async function page({ params }: { params: { name: string } }) {
-  const data: projectType = await fetchProjectData(params.name);
+  const data = ProjectsData[params.name];
+
+  if (!data) {
+    redirect("/404");
+  }
 
   return (
     <div>

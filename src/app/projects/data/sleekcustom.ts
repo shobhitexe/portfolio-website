@@ -1,9 +1,6 @@
-import { NextResponse } from "next/server";
-import { projectType } from "../projectsType";
-
 const sleekcustomImageBaseUrl: string = "/images/Projects/sleekcustom";
 
-const sleekcustomData: projectType = {
+export default {
   head: {
     title: "Sleek Custom",
     stack: "ReactJs",
@@ -27,7 +24,3 @@ const sleekcustomData: projectType = {
     `${sleekcustomImageBaseUrl}/sleekcustom6.png`,
   ],
 };
-
-export async function GET() {
-  return NextResponse.json(sleekcustomData, { status: 200 });
-}

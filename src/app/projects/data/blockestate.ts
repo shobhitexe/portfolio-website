@@ -1,9 +1,6 @@
-import { projectType } from "../projectsType";
-import { NextResponse } from "next/server";
-
 const blockestateBaseUrl: string = "/images/Projects/blockestate";
 
-const blockestateData: projectType = {
+export default {
   head: {
     title: "Blockestate",
     stack: "ReactJs/Solidity",
@@ -30,7 +27,3 @@ const blockestateData: projectType = {
     `${blockestateBaseUrl}/blockestate6.png`,
   ],
 };
-
-export async function GET() {
-  return NextResponse.json(blockestateData, { status: 200 });
-}

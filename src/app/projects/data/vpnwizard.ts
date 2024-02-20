@@ -1,9 +1,6 @@
-import { NextResponse } from "next/server";
-import { projectType } from "../projectsType";
-
 const vpnwizardBaseUrl: string = "/images/Projects/vpnwizard";
 
-const vpnwizardData: projectType = {
+export default {
   head: {
     title: "Vpn Wizard",
     stack: "HTML/CSS/JS",
@@ -25,7 +22,3 @@ const vpnwizardData: projectType = {
     `${vpnwizardBaseUrl}/vpnwizard4.png`,
   ],
 };
-
-export async function GET() {
-  return NextResponse.json(vpnwizardData, { status: 200 });
-}
