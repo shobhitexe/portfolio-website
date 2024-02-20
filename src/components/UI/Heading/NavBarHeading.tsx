@@ -16,7 +16,7 @@ export default function NavBarHeading() {
 
   useEffect(() => {
     dispatch(setCurrRoute(pathname === "/" ? "/home" : pathname));
-  }, [pathname]);
+  }, [dispatch, pathname]);
 
   return (
     <div
