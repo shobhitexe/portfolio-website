@@ -1,11 +1,13 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import {
   AllWorksData,
   AllWorksType,
 } from "../Portfolio/AllWorks/AllWorksConstants";
-import Label, { labelColors } from "../UI/Label/Label";
+import Label, { labelColors } from "../ui/Label/Label";
 import Link from "next/link";
-import SlideText from "../UI/SlideText/SlideText";
+import SlideText from "../ui/SlideText/SlideText";
 import Image from "next/image";
 
 export default function ProjectSlider({
@@ -50,7 +52,7 @@ export default function ProjectSlider({
                     label={data.title}
                     style="text-whiteShade md:text-[20px] text-[17px] font-medium"
                   />
-                  <Link href={`/Projects/${data.alt}`}>
+                  <Link href={`/projects/${data.alt}`}>
                     <Label
                       title="View"
                       labelBg={labelColors.transparant}

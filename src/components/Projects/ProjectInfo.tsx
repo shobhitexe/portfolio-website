@@ -1,4 +1,6 @@
-import Label, { labelColors } from "../UI/Label/Label";
+"use client";
+
+import Label, { labelColors } from "../ui/Label/Label";
 
 type ProjectInfoProps = {
   desc: { descHead: string; descPara: string };

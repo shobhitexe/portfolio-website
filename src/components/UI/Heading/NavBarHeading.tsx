@@ -1,10 +1,22 @@
+"use client";
+
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/rootReducer";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { setCurrRoute } from "@/store/slices/navCurrRouteText";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 export default function NavBarHeading() {
   const route = useSelector((state: RootState) => state.currRoute.route);
   const router = useRouter();
+  const pathname = usePathname();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setCurrRoute(pathname === "/" ? "/home" : pathname));
+  }, [pathname]);
 
   return (
     <div

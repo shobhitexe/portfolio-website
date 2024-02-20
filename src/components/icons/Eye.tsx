@@ -1,3 +1,5 @@
+"use client";
+
 import { SVGProps } from "react";
 
 export default function Eye(props: SVGProps<SVGSVGElement>) {

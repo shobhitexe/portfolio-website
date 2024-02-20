@@ -1,8 +1,10 @@
+"use client";
+
 import { AboutSectionLinks } from "../Home/AboutSection/AboutSectionConstants";
 import { navLinks } from "../Navbar/navbarConstants";
-import FlipText from "../UI/FlipText/FlipText";
-import NavBarHeading from "../UI/Heading/NavBarHeading";
-import Label, { labelColors } from "../UI/Label/Label";
+import FlipText from "../ui/FlipText/FlipText";
+import NavBarHeading from "../ui/Heading/NavBarHeading";
+import Label, { labelColors } from "../ui/Label/Label";
 
 export default function Footer() {
   return (

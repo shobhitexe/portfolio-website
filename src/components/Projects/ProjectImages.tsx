@@ -1,5 +1,6 @@
-import Image from "next/image";
-import RevealImage, { RevealColorColors } from "../UI/RevealImage/RevealImage";
+"use client";
+
+import RevealImage, { RevealColorColors } from "../ui/RevealImage/RevealImage";
 
 export default function ProjectImages({ images }: { images: string[] }) {
   return (

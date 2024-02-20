@@ -1,4 +1,4 @@
-import WorksGrid from "@/components/UI/WorksGrid/WorksGrid";
+import WorksGrid from "@/components/ui/WorksGrid/WorksGrid";
 import { AllWorksData } from "./AllWorksConstants";
 
 export default function AllWorks() {

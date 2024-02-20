@@ -1,8 +1,10 @@
-import Label, { labelColors } from "../Label/Label";
-import SlideText from "../SlideText/SlideText";
-import RevealImage, { RevealColorColors } from "../RevealImage/RevealImage";
+"use client";
+
 import { AllWorksType } from "@/components/Portfolio/AllWorks/AllWorksConstants";
 import Link from "next/link";
+import Label, { labelColors } from "../Label/Label";
+import RevealImage, { RevealColorColors } from "../RevealImage/RevealImage";
+import SlideText from "../SlideText/SlideText";
 
 type WorksGridProps = { worksArray: AllWorksType[] };
 
@@ -21,7 +23,7 @@ export default function WorksGrid({ worksArray }: WorksGridProps) {
               label={work.title}
               style="text-whiteShade text-[20px] font-medium"
             />
-            <Link href={`/Projects/${work.alt}`}>
+            <Link href={`/projects/${work.alt}`}>
               <Label
                 title="View"
                 labelBg={labelColors.transparant}

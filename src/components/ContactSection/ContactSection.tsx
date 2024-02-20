@@ -1,6 +1,8 @@
-import Button, { buttonColors } from "../UI/Button/Button";
-import Label, { labelColors } from "../UI/Label/Label";
-import SlideText from "../UI/SlideText/SlideText";
+"use client";
+
+import Button, { buttonColors } from "../ui/Button/Button";
+import Label, { labelColors } from "../ui/Label/Label";
+import SlideText from "../ui/SlideText/SlideText";
 import Arrow from "../icons/Arrow";
 import Fingers from "../icons/Fingers";
 
@@ -25,7 +27,7 @@ export default function ContactSection() {
               circleBg={buttonColors.gray}
               FirstSvg={Arrow}
               SecondSvg={Fingers}
-              redirectTo="/Contact"
+              redirectTo="/contact"
             />
           </div>
         </div>

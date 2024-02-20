@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { projectType } from "./projectsType";
+import { projectType } from "../projectsType";
+import { NextResponse } from "next/server";
 
 const blockestateBaseUrl: string = "/images/Projects/blockestate";
 
@@ -31,9 +31,6 @@ const blockestateData: projectType = {
   ],
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  return res.status(200).json(blockestateData);
+export async function GET() {
+  return NextResponse.json(blockestateData, { status: 200 });
 }

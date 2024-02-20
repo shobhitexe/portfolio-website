@@ -1,8 +1,10 @@
-import Button from "../../UI/Button/Button";
-import { buttonColors } from "../../UI/Button/Button";
+"use client";
+
+import Button from "../../ui/Button/Button";
+import { buttonColors } from "../../ui/Button/Button";
 import Rocket from "../../icons/Rocket";
 import RocketFill from "../../icons/RocketFill";
-import PageHeader from "../../UI/pageHeading/PageHeader";
+import PageHeader from "../../ui/pageHeading/PageHeader";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -35,7 +37,7 @@ export default function Hero() {
           finding creative solutions."
         buttonOneText="Contact Me"
         indexHero={true}
-        redirectOne="/Contact"
+        redirectOne="/contact"
       />
     </div>
   );

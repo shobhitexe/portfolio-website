@@ -1,7 +1,9 @@
-import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
-import Button, { buttonColors } from "../../UI/Button/Button";
-import Label, { labelColors } from "../../UI/Label/Label";
-import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
+"use client";
+
+import UpRevealText from "@/components/ui/UpRevealText/UpRevealText";
+import Button, { buttonColors } from "../../ui/Button/Button";
+import Label, { labelColors } from "../../ui/Label/Label";
+import SlideText, { SlideTextColors } from "../../ui/SlideText/SlideText";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
 import Fingers from "../../icons/Fingers";
@@ -32,7 +34,7 @@ export default function ExpertiseLeft() {
           circleBg={buttonColors.white}
           FirstSvg={Arrow}
           SecondSvg={Eye}
-          redirectTo="/About"
+          redirectTo="/about"
         />
         <Button
           label="Contact Me"
@@ -40,7 +42,7 @@ export default function ExpertiseLeft() {
           circleBg={buttonColors.white}
           FirstSvg={Arrow}
           SecondSvg={Fingers}
-          redirectTo="/Contact"
+          redirectTo="/contact"
         />
       </div>
     </div>

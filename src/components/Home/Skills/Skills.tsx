@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { skills } from "./SkillsConstants";
 import Image from "next/image";

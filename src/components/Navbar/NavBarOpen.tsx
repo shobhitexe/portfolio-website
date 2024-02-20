@@ -1,3 +1,5 @@
+"use client";
+
 import { navLinks } from "./navbarConstants";
 import DiagonalArrow from "../icons/DiagonalArrow";
 import Link from "next/link";

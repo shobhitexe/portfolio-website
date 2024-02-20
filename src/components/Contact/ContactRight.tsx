@@ -1,4 +1,6 @@
-import Label, { labelColors } from "../UI/Label/Label";
+"use client";
+
+import Label, { labelColors } from "../ui/Label/Label";
 import { ChangeEvent, FormEvent } from "react";
 import { RootState } from "@/store/rootReducer";
 import { useSelector } from "react-redux";

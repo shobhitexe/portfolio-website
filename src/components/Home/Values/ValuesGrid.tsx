@@ -1,4 +1,4 @@
-import SlideText from "@/components/UI/SlideText/SlideText";
+import SlideText from "@/components/ui/SlideText/SlideText";
 import { valuesData } from "./ValuesConstants";
 
 export default function ValuesGrid() {

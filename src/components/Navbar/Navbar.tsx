@@ -1,11 +1,13 @@
+"use client";
+
 import { RootState } from "@/store/rootReducer";
 import { useSelector } from "react-redux";
-import { buttonColors } from "../UI/Button/Button";
-import Button from "../UI/Button/Button";
+import { buttonColors } from "../ui/Button/Button";
+import Button from "../ui/Button/Button";
 import NavBarOpen from "./NavBarOpen";
 import { useDispatch } from "react-redux";
 import { setIsNavOpen } from "@/store/slices/navbarOpen";
-import NavBarHeading from "../UI/Heading/NavBarHeading";
+import NavBarHeading from "../ui/Heading/NavBarHeading";
 import Arrow from "../icons/Arrow";
 import Fingers from "../icons/Fingers";
 import { AnimatePresence, motion } from "framer-motion";
@@ -36,7 +38,7 @@ export default function Navbar() {
           circleBg={buttonColors.gray}
           FirstSvg={Arrow}
           SecondSvg={Fingers}
-          redirectTo="/Contact"
+          redirectTo="/contact"
         />
         <div
           onClick={() => {

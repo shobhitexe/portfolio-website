@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { projectType } from "./projectsType";
+import { NextResponse } from "next/server";
+import { projectType } from "../projectsType";
 
 const vpnwizardBaseUrl: string = "/images/Projects/vpnwizard";
 
@@ -26,9 +26,6 @@ const vpnwizardData: projectType = {
   ],
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  return res.status(200).json(vpnwizardData);
+export async function GET() {
+  return NextResponse.json(vpnwizardData, { status: 200 });
 }

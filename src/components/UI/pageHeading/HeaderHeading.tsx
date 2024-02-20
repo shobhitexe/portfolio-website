@@ -1,3 +1,5 @@
+"use client";
+
 import { RootState } from "@/store/rootReducer";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";

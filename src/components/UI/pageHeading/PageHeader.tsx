@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "../Button/Button";
 import { buttonColors } from "../Button/Button";
 import HeaderHeading from "./HeaderHeading";

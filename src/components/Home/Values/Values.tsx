@@ -1,9 +1,11 @@
-import Label, { labelColors } from "@/components/UI/Label/Label";
+"use client";
+
+import Label, { labelColors } from "@/components/ui/Label/Label";
 import SlideText, {
   SlideTextColors,
-} from "@/components/UI/SlideText/SlideText";
+} from "@/components/ui/SlideText/SlideText";
 import ValuesGrid from "./ValuesGrid";
-import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
+import UpRevealText from "@/components/ui/UpRevealText/UpRevealText";
 
 export default function Values() {
   return (

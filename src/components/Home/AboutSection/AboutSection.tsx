@@ -1,15 +1,17 @@
+"use client";
+
 import {
   AboutSectionLinks,
   headingParagraph1,
   headingParagraph2,
 } from "./AboutSectionConstants";
-import Label, { labelColors } from "../../UI/Label/Label";
+import Label, { labelColors } from "../../ui/Label/Label";
 import Image from "next/image";
-import Button from "../../UI/Button/Button";
-import { buttonColors } from "../../UI/Button/Button";
+import Button from "../../ui/Button/Button";
+import { buttonColors } from "../../ui/Button/Button";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
-import UpRevealText from "@/components/UI/UpRevealText/UpRevealText";
+import UpRevealText from "@/components/ui/UpRevealText/UpRevealText";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
@@ -69,7 +71,7 @@ export default function AboutSection() {
               FirstSvg={Arrow}
               border={true}
               SecondSvg={Eye}
-              redirectTo="/About"
+              redirectTo="/about"
             />
           </div>
         </div>

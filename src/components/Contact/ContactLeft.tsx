@@ -1,5 +1,5 @@
-import FlipText from "../UI/FlipText/FlipText";
-import SlideText from "../UI/SlideText/SlideText";
+import FlipText from "../ui/FlipText/FlipText";
+import SlideText from "../ui/SlideText/SlideText";
 import Email from "../icons/Email";
 
 export default function ContactLeft() {

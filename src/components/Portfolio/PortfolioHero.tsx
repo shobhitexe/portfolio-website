@@ -1,4 +1,4 @@
-import PageHeader from "../UI/pageHeading/PageHeader";
+import PageHeader from "../ui/pageHeading/PageHeader";
 
 export default function PortfolioHero() {
   return (
@@ -12,8 +12,8 @@ export default function PortfolioHero() {
         startHighlight={2}
         endHighlight={26}
         indexHero={false}
-        redirectOne="/Contact"
-        redirectTwo="/Resume"
+        redirectOne="/contact"
+        redirectTwo="/resume"
       />
     </div>
   );

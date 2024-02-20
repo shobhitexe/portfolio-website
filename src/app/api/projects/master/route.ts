@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { projectType } from "./projectsType";
+import { NextResponse } from "next/server";
+import { projectType } from "../projectsType";
 
 const masterBaseUrl: string = "/images/Projects/master";
 
@@ -26,9 +26,6 @@ const masterData: projectType = {
   ],
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  return res.status(200).json(masterData);
+export async function GET() {
+  return NextResponse.json(masterData, { status: 200 });
 }

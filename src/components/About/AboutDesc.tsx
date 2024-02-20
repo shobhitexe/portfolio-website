@@ -1,6 +1,8 @@
-import Button, { buttonColors } from "../UI/Button/Button";
-import Label, { labelColors } from "../UI/Label/Label";
-import UpRevealText from "../UI/UpRevealText/UpRevealText";
+"use client";
+
+import Button, { buttonColors } from "../ui/Button/Button";
+import Label, { labelColors } from "../ui/Label/Label";
+import UpRevealText from "../ui/UpRevealText/UpRevealText";
 import Arrow from "../icons/Arrow";
 import Eye from "../icons/Eye";
 import Fingers from "../icons/Fingers";
@@ -39,7 +41,7 @@ export default function AboutDesc() {
             FirstSvg={Arrow}
             SecondSvg={Fingers}
             border={true}
-            redirectTo="/Portfolio"
+            redirectTo="/portfolio"
           />
           <Button
             label="Resume"
@@ -47,7 +49,7 @@ export default function AboutDesc() {
             circleBg={buttonColors.gray}
             FirstSvg={Arrow}
             SecondSvg={Eye}
-            redirectTo="/Resume"
+            redirectTo="/resume"
           />
         </div>
       </div>

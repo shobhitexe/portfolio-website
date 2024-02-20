@@ -1,10 +1,12 @@
+"use client";
+
 import { AllWorksData } from "@/components/Portfolio/AllWorks/AllWorksConstants";
-import Button, { buttonColors } from "../../UI/Button/Button";
-import Label, { labelColors } from "../../UI/Label/Label";
-import SlideText, { SlideTextColors } from "../../UI/SlideText/SlideText";
+import Button, { buttonColors } from "../../ui/Button/Button";
+import Label, { labelColors } from "../../ui/Label/Label";
+import SlideText, { SlideTextColors } from "../../ui/SlideText/SlideText";
 import Arrow from "../../icons/Arrow";
 import Eye from "../../icons/Eye";
-import WorksGrid from "@/components/UI/WorksGrid/WorksGrid";
+import WorksGrid from "@/components/ui/WorksGrid/WorksGrid";
 import { motion } from "framer-motion";
 
 export default function Work() {
@@ -47,7 +49,7 @@ export default function Work() {
           circleBg={buttonColors.gray}
           FirstSvg={Arrow}
           SecondSvg={Eye}
-          redirectTo="/Portfolio"
+          redirectTo="/portfolio"
         />
       </div>
     </div>

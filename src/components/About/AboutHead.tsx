@@ -1,4 +1,4 @@
-import PageHeader from "../UI/pageHeading/PageHeader";
+import PageHeader from "../ui/pageHeading/PageHeader";
 
 export default function AboutHead() {
   return (
@@ -12,8 +12,8 @@ export default function AboutHead() {
         startHighlight={4}
         endHighlight={18}
         indexHero={false}
-        redirectOne="/Contact"
-        redirectTwo="/Portfolio"
+        redirectOne="/contact"
+        redirectTwo="/portfolio"
       />
     </div>
   );

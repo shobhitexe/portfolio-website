@@ -1,15 +1,14 @@
 import { mailOptions, transporter } from "@/config/nodemailer";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") {
-    return res.status(400).json({ error: "Bad request" });
-  }
-
+export async function POST(request: Request) {
   try {
+    const req = await request.json();
+
+    if (!req.body) {
+      return NextResponse.error();
+    }
+
     await transporter.sendMail({
       ...mailOptions,
       subject: "New query from portfolio website",
@@ -20,8 +19,8 @@ export default async function handler(
       <p>How did he find me - ${req.body.find || ""}</p>`,
     });
 
-    res.status(200).json({ success: "Form submitted" });
+    return NextResponse.json({ success: "Form submitted" }, { status: 200 });
   } catch (error) {
-    return res.status(400).json({ error: error });
+    return NextResponse.error();
   }
 }

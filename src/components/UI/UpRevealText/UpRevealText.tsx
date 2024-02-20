@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 type UpRevealTextProps = { label: string; styles?: string; delay: number };

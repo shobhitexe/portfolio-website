@@ -1,3 +1,5 @@
+"use client";
+
 export enum labelColors {
   green = "bg-green-500",
   gray = "bg-grayShade",
